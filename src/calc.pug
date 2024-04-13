@@ -1,0 +1,278 @@
+doctype html
+html
+	head
+		meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+		link(rel='stylesheet' href='css/style.css')
+		link(rel='stylesheet' href='css/slick.css')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+		link(rel='stylesheet' href='https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css')
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css')
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		script(type='text/javascript' src='js/slick.min.js')
+		cript(src='js/app.min.js')
+		script(src='https://code.jquery.com/ui/1.13.2/jquery-ui.js')
+		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+		script.
+			$( function() {
+			$( "#slider-range-max" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max2" ).slider({
+			range: "max",
+			min: 1,
+			max: 36,
+			value: 18,
+			slide: function( event, ui ) {
+			$( "#amount2" ).val( ui.value + " мес.");
+			}
+			});
+			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " мес." );
+			} );
+	body
+		.wrapper
+			include includes/header
+			.index-first-block.calc-page
+				.wrap.big
+					.banner
+						.wrap
+							.text
+								.text__inner
+									h2 
+										| Калькулятор 
+										span займа
+									p
+										| Честно. Надёжно. Онлайн. 
+										span
+											i В реестре ЦБ РФ
+									img.image(src='img/index-first-block2.png')
+									.pre-form.is-lg-visible
+										span Введите свой номер и получите до 5 млн ₽ за 30 минут
+									.pre-form.is-lg-hidden
+										span До 10 млн ₽ за 30 минут
+									form.index-first-block__form
+										input(type='text' placeholder='+7 (___) ___-__-__')
+										button Получить деньги
+									.bottom-text
+										| Нажимая на кнопку я соглашаюсь с 
+										a(href="#") политикой конфиденциальности
+			.calc-block
+				.wrap
+					h2.is-lg-hidden Рассчитайте платёж
+					.row
+						.item.col-lg-4
+							.field
+								p сумма займа
+								input#amount(type='text' readonly='')
+							#slider-range-max
+							.values.flex
+								div 50 000 P
+								div 10 000 000 P
+						.item.col-lg-4
+							.field
+								p срок займа
+								input#amount2(type='text' readonly='')
+							#slider-range-max2
+							.values.flex
+								div 1 мес.
+								div 36 мес.
+						.result.col-lg-4
+							.top.flex
+								.top-item
+									p
+										| от 
+										span 27 000
+										|  ₽
+									| 							Ежемесячный платеж
+								.line
+								.top-item
+									p
+										| от 
+										span 2
+										|  %
+									| 							Ставка в месяц
+							.agree
+								input#agree.checkbox(type='checkbox')
+								label(for='agree')
+									span Минимальный платёж
+									| 							Первые 3 месяца оплачивайте только проценты
+								.link.is-lg-visible
+									a(href='#') График платежей
+					.bottom-button
+						button Оформить
+						.is-lg-hidden
+							a(href="#").link-plan График платежей
+			.program-block.program-block--mod-bg-white
+				.wrap
+					h2 Программы займов
+					.top-text
+						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
+					.list.row
+						.col-lg-4
+							.item
+								img(src='img/program1.jpg')
+								.text
+									| Займы под 
+									br
+									| авто
+						.col-lg-4
+							.item
+								img(src='img/program2.jpg')
+								.text
+									| Займы для 
+									br
+									| бизнеса
+						.col-lg-4
+							.item
+								img(src='img/program3.jpg')
+								.text
+									| Автоломбард
+						.col-lg-4
+							.item
+								img(src='img/program4.jpg')
+								.text
+									| Рефинансирование 
+									br
+									| займов
+						.col-lg-4.is-lg-visible
+							.item
+								img(src='img/program5.jpg')
+								.text
+									p
+										span АКЦИЯ
+									br
+									| 						Минимальный 
+									br
+									| платеж
+			.pre-footer-block.order-mob-11
+				.wrap
+					.line
+					.row.pre-footer-row
+						.item.col-lg-4
+							h3 Услуги оказывают
+							p 					ООО МКК "МультиГлобал" 
+								br
+								| 					ОГРН: 5177746069584 
+							p 					ООО  "Ломбард АвтокапиталЪ" 
+								br
+								| 					ОГРН: 1137746165281
+						.item.col-lg-4
+							h3 Документы
+							a(href='#') Правила предоставления займов
+							br
+							a(href='#') Реквизиты ООО МКК «МультиГлобал»
+							br
+							a(href='#') Свидетельство СРО
+							br
+							a(href='#') Свидетельство ЦБ РФ
+							br
+							a(href='#') Политика конфеденциальности
+						.item.col-lg-4.pre-footer-contact.is-lg-visible
+							div
+								a.phone(href='#') + 7 (495) 126-19-75
+								button Позвонить
+			footer.footer.order-mob-12
+				.wrap
+					.logo
+						a(href='/')
+							img(src='img/logo.svg')
+					.flex
+						.contacts
+							.item
+								div
+									img(src='img/contacts1.svg')
+								div
+									| Москва, ул. Антонова-Овсеенко, 
+									br
+									| д.15, стр.3
+							.item
+								div
+									img(src='img/contacts2.svg')
+								div
+									a(href='#') +7 (495) 241-17-26
+									a(href='#') info@autocash.ru
+						ul
+							li
+								a(href='#') Займ под ПТС
+							li
+								a(href='#') Автозалог
+							li
+								a(href='#') Займ для бизнеса
+							li
+								a(href='#') Перезалог ПТС
+							li
+								a(href='#') Продажа
+							li
+								a(href='#') Документы
+						ul
+							li
+								a(href='#') Документы
+							li
+								a(href='#') Калькулятор
+							li
+								a(href='#') О компании
+							li
+								a(href='#') Контакты
+						.social
+							p
+								| Отвечаем в 
+								br
+								| мессенджерах
+							a(href='#')
+								img(src='img/social3.svg')
+							a(href='#')
+								img(src='img/social4.svg')
+			.hot-line-block.order-mob-13
+				.wrap.flex
+					.user
+						div
+							img(src='img/avatar.png')
+						div
+							a.phone(href='#') 8 (945) 156-78-98
+							span
+								i горячая линия
+					.text
+						| АвтокапиталЪ — удобный сервис по получению займов под залог транспортных средств. 
+						br
+						| 				Более 10 лет мы помогаем нашим заемщикам решить их финансовые вопросы
+			.bottom-data-block.order-mob-14
+				.wrap
+					.row
+						.item.col-lg-4
+							h3 Условия выдачи
+							p
+								| Сумма займа: от 50 000 рублей до 3 000 000 рублей, до 90% от стоимости автомобиля.
+							p Период погашения долга: 12–36 месяцев.
+							p
+								| Платежи: Заём погашается ежемесячными равными платежами, которые состоят из оплаты основного долга и процентов. Пеня при просрочке начисляется из расчёта 20% на сумму просроченной задолженности.
+							p
+								a.phone-item(href='#') +7 (495) 241-17-26
+						.item.col-lg-4
+							h3 Досрочное погашение
+							p
+								| Возможно без штрафов в любой день; проценты оплачиваются только за фактический срок пользования деньгами.
+							p
+								| Минимальная процентная ставка: 30% годовых или 2,5% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+							p
+								| Максимальная процентная ставка: 88% годовых или 6% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+						.item.col-lg-4
+							h3 Пример рассчета
+							p Сумма займа: 100 000 ₽
+							p Период погашения долга: 12 месяцев.
+							p Проценты: 4,5% в месяц (42% годовых).
+							p Ежемесячный платёж: 11 833 ₽
+							p Итого к возврату: 142 000 ₽
+							p Банк партнёр: ПАО банк «ФК Открытие»
+							p Генеральная лицензия банка России № 2209 от 24.11.2014

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/slick.min.js"></script>
+		<script src="js/app.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="js/jquery.responsiveTabs.js"></script>
+		<script>
+			$( function() {
+			$( "#slider-range-max" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
+			} );
+		</script>
+		<script>
+			$( function() {
+			$( "#slider-range-max2" ).slider({
+			range: "max",
+			min: 1,
+			max: 36,
+			value: 18,
+			slide: function( event, ui ) {
+			$( "#amount2" ).val( ui.value + " мес.");
+			}
+			});
+			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " мес." );
+			} );
+		</script>
+		<script>
+			$( function() {
+			$( "#slider-range-max4" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount4" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount4" ).val( $( "#slider-range-max4" ).slider( "value" ) + " ₽" );
+			} );
+		</script>
+		<script>
+			$( function() {
+			$( "#slider-range-max5" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount5" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
+			} );
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav class="mobile-menu">
+				<a class="close"></a>
+				<div class="wrap">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/login2.svg"> Личный кабинет
+							</a>
+						</li>
+						<li>
+							<a href="#">Главная</a>
+						</li>
+						<li>
+							<a>
+								<i class="fa fa-angle-down"></i> Продукты
+							</a>
+							<ul>
+								<li>
+									<a href="#">Займ под авто</a>
+								</li>
+								<li>
+									<a href="#">Займ для бизнеса</a>
+								</li>
+								<li>
+									<a href="#">Рефинансирование</a>
+								</li>
+								<li>
+									<a href="#">Автоломбард</a>
+								</li>
+								<li>
+									<a href="#">Инвестиции</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<i class="fa fa-angle-down"></i> Оформить займ
+							</a>
+							<ul>
+								<li>
+									<a href="#">Заявка на займ</a>
+								</li>
+								<li>
+									<a href="#">Оплата займа</a>
+								</li>
+								<li>
+									<a href="#">Документы</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a>
+								<i class="fa fa-angle-down"></i> О компании
+							</a>
+							<ul>
+								<li>
+									<a href="#">Новости</a>
+								</li>
+								<li>
+									<a href="#">Блог</a>
+								</li>
+								<li>
+									<a href="#">Карьера</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">В продаже</a>
+								</li>
+								<li>
+									<a href="#">словия</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+					<div class="contacts">
+						<div class="adress">Москва, ул. Антонова-Овсеенко, д. 15, стр. 3</div>
+						<a class="phone" href="#">+7 (495) 241-17-26</a>
+						<a class="mail" href="#">info@autocash.ru</a>
+					</div>
+				</div>
+			</nav>
+			<header class="header">
+				<div class="wrap big header-inner">
+					<ul class="is-lg-visible top-menu">
+						<li>
+							<a href="#">О компании</a>
+						</li>
+						<li>
+							<a href="#">Блог</a>
+						</li>
+						<li>
+							<a href="#">Новости</a>
+						</li>
+						<li>
+							<a href="#">Документы</a>
+						</li>
+						<li>
+							<a href="#">Инвестици</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+						<li>
+							<a href="#">Ещё 
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul>
+								<li>
+									<a href="#">Заявка на займ</a>
+								</li>
+								<li>
+									<a href="#">Оплата займа</a>
+								</li>
+								<li>
+									<a href="#">Карьера</a>
+								</li>
+								<li>
+									<a href="#">Отзывы</a>
+								</li>
+								<li>
+									<a href="#">Условия</a>
+								</li>
+								<li>
+									<a href="#">В продаже</a>
+								</li>
+								<li>
+									<a href="#">Карта сайта</a>
+								</li>
+							</ul>
+						</li>
+						<li></li>
+					</ul>
+					<ul class="top-menu-other">
+						<li>
+							<a class="city" href="#">Москва</a>
+							<ul>
+								<li>
+									<a href="#">Санкт-Петербург</a>
+								</li>
+								<li>
+									<a href="#">Нижний Новгород</a>
+								</li>
+								<li>
+									<a href="#">Владивосток</a>
+								</li>
+								<li>
+									<a href="#">Тюмень</a>
+								</li>
+								<li>
+									<a href="#">Ярославль</a>
+								</li>
+							</ul>
+						</li>
+						<li class="is-lg-visible">
+							<a class="card" href="#">Оплатить займ</a>
+						</li>
+					</ul>
+					<hr class="header-hr">
+					<!-- <a href="#" class="city">Москва</a>-->
+					<div class="logo">
+						<a href="/">
+							<img src="img/logo.svg">
+						</a>
+					</div>
+					<div class="is-lg-hidden mob-other">
+						<button class="enter-btn">
+							<span></span> Войти
+						</button>
+						<a class="menu-btn" href="#"></a>
+					</div>
+					<ul class="is-lg-visible main-menu">
+						<li>
+							<a class="menu" href="#"></a>
+						</li>
+						<li>
+							<a href="#">займ под авто</a>
+						</li>
+						<li>
+							<a href="#">АВТОЛОМБАРД</a>
+						</li>
+						<li>
+							<a href="#">Займ для бизнеса</a>
+						</li>
+						<li>
+							<a href="#">рефинансирование</a>
+						</li>
+					</ul>
+					<div class="contacts">
+						<div class="social">
+							<a href="#">
+								<img src="img/social1.svg">
+							</a>
+							<a href="#">
+								<img src="img/social2.svg">
+							</a>
+						</div>
+						<div class="phone">
+							<a href="#">+7 495 156-78-98</a>
+							<span class="is-lg-visible">					Без выходных с 9:00 до 21:00</span>
+						</div>
+						<button class="enter-btn is-lg-visible">
+							<span></span> Войти
+						</button>
+					</div>
+				</div>
+			</header>
+			<div class="index-first-block service2 order-mob-1">
+				<div class="wrap big wrap-first">
+					<div class="banner">
+						<div class="wrap">
+							<div class="text">
+								<div class="text__inner">
+									<h2>Займы под залог авто</h2>
+									<p>Честно. Надёжно. Онлайн. 
+										<span>
+											<i>В реестре ЦБ РФ</i>
+										</span>
+									</p>
+									<img class="image" src="img/index-first-block6.png">
+									<div class="pre-form is-lg-visible">
+										<span>Введите свой номер и получите до 5 млн ₽ за 30 минут</span>
+									</div>
+									<div class="pre-form is-lg-hidden">
+										<span>До 10 млн ₽ за 30 минут</span>
+									</div>
+									<form class="index-first-block__form">
+										<input type="text" placeholder="+7 (___) ___-__-__">
+										<button>Получить деньги</button>
+									</form>
+									<div class="bottom-text">Нажимая на кнопку я соглашаюсь с 
+										<a href="#">политикой конфиденциальности</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="calc-block order-mob-2">
+				<div class="wrap">
+					<h2 class="is-lg-hidden">Рассчитайте платёж</h2>
+					<div class="row">
+						<div class="item col-lg-4">
+							<div class="field">
+								<p>сумма займа</p>
+								<input id="amount" type="text" readonly="">
+							</div>
+							<div id="slider-range-max"></div>
+							<div class="values flex">
+								<div>50 000 P</div>
+								<div>10 000 000 P</div>
+							</div>
+						</div>
+						<div class="item col-lg-4">
+							<div class="field">
+								<p>срок займа</p>
+								<input id="amount2" type="text" readonly="">
+							</div>
+							<div id="slider-range-max2"></div>
+							<div class="values flex">
+								<div>1 мес.</div>
+								<div>36 мес.</div>
+							</div>
+						</div>
+						<div class="result col-lg-4">
+							<div class="top flex">
+								<div class="top-item">
+									<p>от 
+										<span>27 000</span> ₽
+									</p>							Ежемесячный платеж
+								</div>
+								<div class="line"></div>
+								<div class="top-item">
+									<p>от 
+										<span>2</span> %
+									</p>							Ставка в месяц
+								</div>
+							</div>
+							<div class="agree">
+								<input class="checkbox" id="agree" type="checkbox">
+								<label for="agree">
+									<span>Минимальный платёж</span>							Первые 3 месяца оплачивайте только проценты
+								</label>
+								<div class="link is-lg-visible">
+									<a href="#">График платежей</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-button">
+						<button>Оформить</button>
+						<div class="is-lg-hidden">
+							<a class="link-plan" href="#">График платежей</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="targets-block order-mob-3">
+				<div class="wrap">
+					<h2>Быстро и удобно</h2>
+				</div>
+				<div class="list">
+					<div class="wrap">
+						<div class="row">
+							<div class="item col-lg-3">
+								<div>
+									<img src="img/target6.svg">
+								</div>
+								<div>
+									<span>Авто остаётся у вас</span>
+								</div>
+							</div>
+							<div class="item col-lg-3">
+								<div>
+									<img src="img/target7.svg">
+								</div>
+								<div>
+									<span>С любой кредитной историей</span>
+								</div>
+							</div>
+							<div class="item col-lg-3">
+								<div>
+									<img src="img/target8.svg">
+								</div>
+								<div>
+									<span>Деньги в день обращения</span>
+								</div>
+							</div>
+							<div class="item col-lg-3">
+								<div>
+									<img src="img/target9.svg">
+								</div>
+								<div>
+									<span>Досрочное погашение в любой день</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="technic-block order-mob-3 is-lg-visible">
+				<div class="wrap">
+					<h2>Под залог любой техники</h2>
+					<div class="list row">
+						<div class="col-lg-5">
+							<a class="item" href="#">
+								<div class="technic-item-img">
+									<img src="img/technic1.png">
+								</div>
+								<div class="technic-heading">Лёгковые авто</div>
+							</a>
+						</div>
+						<div class="col-lg-7">
+							<a class="item" href="#">
+								<div class="technic-item-img">
+									<img src="img/technic2.png">
+								</div>
+								<div class="technic-heading">Спецтехнику</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a class="item item--special" href="#">
+								<div class="technic-item-img">
+									<img src="img/technic3.png">
+								</div>
+								<div class="technic-heading">Грузовые авто</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a class="item" href="#">
+								<div class="technic-item-img">
+									<img src="img/technic4.png">
+								</div>
+								<div class="technic-heading">Мототехнику</div>
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<a class="item item--special" href="#">
+								<div class="technic-item-img">
+									<img src="img/technic5.png">
+								</div>
+								<div class="technic-heading">Водный транспорт</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="steps-block order-mob-5">
+				<div class="wrap">
+					<h2>Как оформить?</h2>
+					<div class="row steps-block-row">
+						<div class="col-lg-4 is-lg-visible">
+							<div class="phone-form">
+								<img src="img/phone.png">
+								<div class="logo">
+									<img src="img/logo2.svg">
+								</div>
+								<form>
+									<p>Получите одобрение прямо сейчас в Whatsapp</p>
+									<input type="text" placeholder="+7 (___) ___-__-__">
+									<button>Получить деньги</button>
+								</form>
+							</div>
+						</div>
+						<div class="col-lg-7 offset-lg-1">
+							<div class="content">
+								<h2 class="is-lg-visible">Всё очень просто!</h2>
+								<div class="list">
+									<div class="item">
+										<div class="step">1 шаг
+											<span>2 минуты</span>
+										</div>
+										<h3>Оставьте заявку</h3>
+										<p>можно на сайте, по телефону или через мессенджер</p>
+										<div class="social">
+											<a href="#">
+												<img src="img/social3.svg">
+											</a>
+											<a href="#">
+												<img src="img/social4.svg">
+											</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="step">2 шаг
+											<span>3 минуты</span>
+										</div>
+										<h3>Оставьте заявку 22</h3>
+										<p>можно на сайте, по телефону или через мессенджер</p>
+										<div class="social">
+											<a href="#">
+												<img src="img/social3.svg">
+											</a>
+											<a href="#">
+												<img src="img/social4.svg">
+											</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="step">3 шаг
+											<span>22 минуты</span>
+										</div>
+										<h3>Оставьте заявку 33</h3>
+										<p>можно на сайте, по телефону или через мессенджер</p>
+										<div class="social">
+											<a href="#">
+												<img src="img/social3.svg">
+											</a>
+											<a href="#">
+												<img src="img/social4.svg">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="advantages-block2 advantages-block2--mod-mob order-mob-7">
+				<div class="wrap">
+					<h2>Преимущества</h2>
+					<div class="top-text is-lg-visible">Самые распространённые проблемы с которыми сталкиваются наши клиенты при кредитовании — у нас есть решение!</div>
+					<div class="list other">
+						<div class="row">
+							<div class="is-lg-hidden item-toggle">
+								<div class="item-toggle__inner">Работаем с юрлицами
+									<span class="item-toggle__arrow"></span>
+								</div>
+							</div>
+							<div class="col-lg-4 advantages-item">
+								<div class="item-name">Работаем с юридическими лицами</div>
+								<div class="item">
+									<div class="advantages-item-img">
+										<img src="img/advantages8.jpg">
+									</div>
+									<div class="info">
+										<h3>Работаем с юридическими лицами</h3>
+										<p>Выдаём займы юридическим лицам и индивидуальным предпринимателям</p>
+										<p>под залог любых транспортных средств</p>
+										<ul>
+											<li>Без банковских выписок</li>
+											<li>Без предоставления отчётности</li>
+										</ul>
+										<button class="advantages-btn">Подробнее</button>
+									</div>
+								</div>
+							</div>
+							<div class="is-lg-hidden item-toggle">
+								<div class="item-toggle__inner">Работаем с юрлицами
+									<span class="item-toggle__arrow"></span>
+								</div>
+							</div>
+							<div class="col-lg-4 advantages-item">
+								<div class="item-name">Онлайн решение</div>
+								<div class="item">
+									<div class="advantages-item-img">
+										<img src="img/advantages9.jpg">
+									</div>
+									<div class="info">
+										<h3>Онлайн решение</h3>
+										<div class="social">
+											<a href="#">
+												<img src="img/social3.svg">
+											</a>
+											<a href="#">
+												<img src="img/social4.svg">
+											</a>
+										</div>
+										<p>Отправьте фото документов (ПТС, СТС, паспорт) на наш WatsApp ипл Теlegram и через 5 минут получите решение по займу.</p>
+										<button class="advantages-btn">Отправить заявку</button>
+									</div>
+								</div>
+							</div>
+							<div class="is-lg-hidden item-toggle">
+								<div class="item-toggle__inner">Бесплатный выезд
+									<span class="item-toggle__arrow"></span>
+								</div>
+							</div>
+							<div class="col-lg-4 advantages-item">
+								<div class="item-name">Бесплатный выезд для оформления займа</div>
+								<div class="item">
+									<div class="advantages-item-img">
+										<img src="img/advantages10.jpg">
+									</div>
+									<div class="info">
+										<h3>Бесплатный выезд для оформления займа</h3>
+										<p>Наш сотрудник оперативно приедет по вашему адресу дпя осмотра авто и оформления займа</p>
+										<ul>
+											<li>Экономим ваше время</li>
+											<li>Не нужно приезжать в офис</li>
+										</ul>
+										<button class="advantages-btn">Заказать выезд</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="last-credits-block order-mob-6 last-credits-block--margin-mob">
+				<div class="wrap">
+					<div class="last-credits-row row">
+						<div class="text col-lg-6">
+							<h2>Недавно выданные займы</h2>
+							<div class="info">
+								<p>BMW 528 F10</p>
+								<p>2010 г.в., 93 000 км, 3 000 см3, автомат</p>
+								<p>Оценка: 1 150 000 ₽</p>
+							</div>
+							<div class="data">
+								<div class="item">
+									<span>
+										<i>Наше предложение</i>
+									</span>
+									<div class="price">850 000 ₽</div>						под 4,5% в месяц
+								</div>
+								<div class="item">
+									<span class="other">
+										<i>Другие</i>
+									</span>
+									<div class="price">700 000 ₽</div>						под 6% в месяц
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="photos">
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+								<div class="item">
+									<img src="img/last-credit.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="conditions-block order-mob-8">
+				<div class="wrap">
+					<h2 class="heading-h2">Условия</h2>
+					<div class="tabs" id="tabs">
+						<ul>
+							<li>
+								<a href="#t1">Документы</a>
+							</li>
+							<li>
+								<a href="#t2">Основные условия</a>
+							</li>
+							<li>
+								<a href="#t3">Требования</a>
+							</li>
+							<li>
+								<a href="#t4">Способы получения</a>
+							</li>
+							<li>
+								<a href="#t5">Способы погашения</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="t1">
+							<div class="list flex">
+								<div class="item">
+									<img src="img/condition1.png">
+									<h3>Паспорт</h3>
+								</div>
+								<div class="item">
+									<img src="img/condition2.png">
+									<h3>ПТС</h3>							Бумажный или электронный
+								</div>
+								<div class="item">
+									<img src="img/condition3.png">
+									<h3>СТС</h3>
+								</div>
+							</div>
+						</div>
+						<div class="tab-content" id="t2">222</div>
+						<div class="tab-content other" id="t3">
+							<div class="list2 flex">
+								<div class="list-item flex">
+									<div class="item3">
+										<h3>Заемщик</h3>
+										<ol>
+											<li>Физическое или юридическое лицо</li>
+											<li>Гражданство РФ или иностранное</li>
+											<li>Авто в собственности или представитель по генеральной доверенности</li>
+											<li>Без справок о доходах</li>
+											<li>С любой кредитной историей</li>
+										</ol>
+									</div>
+									<div class="item3">
+										<h3>Залог</h3>
+										<ol>
+											<li>Любые транспортные средства (легковые, грузовые, спецтехника, мототехника, водный транспорт)</li>
+											<li>Любого года выпуска</li>
+											<li>Зарегистрированные на территории РФ</li>
+											<li>Не требуется КАСКО</li>
+										</ol>
+									</div>
+								</div>
+								<div class="list-item flex other">
+									<h3 class="w100">Документы</h3>
+									<div class="item3">
+										<h4>для физлиц</h4>
+										<ol>
+											<li>Паспорт</li>
+											<li>ПТС (бумажный или электронный)</li>
+											<li>СТС</li>
+											<li>Генеральная доверенность (если оформляет не собственник)</li>
+										</ol>
+									</div>
+									<div class="item3">
+										<h4>для юрлиц</h4>
+										<ol>
+											<li>Паспорт ген. директора</li>
+											<li>ПТС (бумажный или электронный)</li>
+											<li>СТС</li>
+											<li>Скан устава компании</li>
+											<li>Реквизиты компании</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-content" id="t4">444</div>
+						<div class="tab-content" id="t5">555</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-request order-mob-9 is-lg-hidden wrap">
+				<h3 class="heading-h3">Отправить заявку</h3>
+				<div class="form-request__img">
+					<img src="img/side-view-young-handsome-man-using-cell-phone-car.jpg" alt="">
+				</div>
+				<input type="text" placeholder="+7 (___) ___-__-__">
+				<button>Отправить</button>
+				<div class="bottom-text">Нажимая на кнопку я соглашаюсь с 
+					<a href="#">политикой конфиденциальности</a>
+				</div>
+			</div>
+			<div class="reviews-block is-lg-hidden order-mob-10 reviews-block--offset-top">
+				<div class="wrap">
+					<div class="flex">
+						<h2>Нам доверяют 
+							<span>
+								<i>В реестре ЦБ РФ</i>
+							</span>
+						</h2>
+						<button class="top-button is-lg-visible">Оставить отзыв</button>
+					</div>
+					<div class="row">
+						<div class="list col-lg-4">
+							<div class="item">
+								<div class="video">
+									<img src="img/review1.jpg">
+									<a class="play" href="#"></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="name">Вячеслав, ИП, Москва</div>
+								<p>Отношение сотрудников вежливое и учтивoе, отвечают развёрнуто и на понятном языке. Деньги выдали сразу же пoсле того, как заложил мaшину, в размере 400 тыс. рублей. Дaлее все пoгасил и вернул свoю машину, прoблем с этим не вoзникло. Рекoмендую к обращению.</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="name">Александра Р</div>
+								<p>Все супер. Быстро и надёжно</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="video">
+									<img src="img/review2.jpg">
+									<a class="play" href="#"></a>
+								</div>
+							</div>
+						</div>
+						<div class="list col-lg-4">
+							<div class="item">
+								<div class="name">Александра Р</div>
+								<p>Как хорошо, когда берёшь кредит под залог автомобиля, а тебе не «любят» мозг справками, страховками, кредитными историями, обращениями к независимым оценщикам. «Автокапитал» делает все быстро и на месте: пригнал машину, оценили, подписали договор, выдали деньги. Что важно: на все про все ушло меньше часа. Все б так работали, легче жить было бы.</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="video">
+									<img src="img/review3.jpg">
+									<a class="play" href="#"></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="name">Мария Т</div>
+								<p>Смогла быстро получить займ под залог ПТС. Сотрудники дали хорошую консультацию и все объяснили. Процент очень адекватный и не смогла найти никаких подводных камней!</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+						</div>
+						<div class="list col-lg-4">
+							<div class="item">
+								<div class="video">
+									<img src="img/review4.jpg">
+									<a class="play" href="#"></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="name">Татьяна П</div>
+								<p>Обращалась в экстренной ситуации. Быстро помогли. Отличный коллегтив. Спасибо</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="name">Степан С</div>
+								<p>Смогла быстро получить займ под залог ПТС. Сотрудники дали хорошую консультацию и все объяснили. Процент очень адекватный и не смогла найти никаких подводных камней!</p>
+								<div class="flex">
+									<div class="author">Источник: 
+										<a href="#">Яндекс</a>
+									</div>
+									<div class="date">12 декабря 2019</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-link">
+						<a href="#">Показать ещё</a>
+					</div>
+				</div>
+			</div>
+			<div class="consult-block is-lg-visible">
+				<div class="wrap">
+					<div class="consult-block__row row">
+						<div class="col-lg-5 consult-block__img">
+							<img src="img/consult-block.jpg" alt="">
+						</div>
+						<div class="consult-block__main col-lg-7 col-xl-5 offset-xl-1">
+							<span class="top-text">
+								<i>Задать вопрос сотруднику</i>
+							</span>
+							<h2>Консультация</h2>
+							<p>Расскажем подробнее, рассчитаем платёж, ответим на вопросы</p>
+							<div class="buttons flex">
+								<button>
+									<img src="img/consult.svg">
+									<span>Написать <br>в WhatsApp</span>
+								</button>
+								<button>
+									<img src="img/consult2.svg">
+									<span>Написать <br>в Telegram</span>
+								</button>
+								<button>Позвонить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="program-block is-lg-visible">
+				<div class="wrap">
+					<h2>Другие программы займов</h2>
+					<div class="top-text">Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.</div>
+					<div class="list row">
+						<div class="col-lg-4">
+							<div class="item">
+								<img src="img/program1.jpg">
+								<div class="text">Займы под <br>авто</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="item">
+								<img src="img/program3.jpg">
+								<div class="text">Автоломбард</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="item">
+								<img src="img/program4.jpg">
+								<div class="text">Рефинансирование <br>займов</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-block order-mob-11">
+				<div class="wrap">
+					<h2>О компании</h2>
+					<div class="row">
+						<div class="col-lg-5 top-text">
+							<p>Финансовая группа Автокапиталъ входит в число ведущих компаний на рынке микрофинансирования в России</p>
+							<p>
+								<span>На протяжении 10 лет</span> мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
+							</p>
+						</div>
+						<div class="top-counts flex col-lg-6 offset-lg-1">
+							<div class="item">
+								<span>10 лет</span>						на рынке
+							</div>
+							<div class="item">
+								<span>72%</span>						обращаются повторно
+							</div>
+							<div class="item">
+								<span>1 500 000 000 ₽</span>						выданных займов
+							</div>
+						</div>
+					</div>
+					<div class="photos">
+						<div class="item">
+							<a href="img/about1.jpg" data-fancybox="gallery">
+								<img src="img/about1.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="img/about2.jpg" data-fancybox="gallery">
+								<img src="img/about2.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="img/about3.jpg" data-fancybox="gallery">
+								<img src="img/about3.jpg">
+							</a>
+						</div>
+						<div class="item big">
+							<a href="img/about4.jpg" data-fancybox="gallery">
+								<img src="img/about4.jpg">
+							</a>
+						</div>
+						<div class="item big">
+							<a href="img/about5.jpg" data-fancybox="gallery">
+								<img src="img/about5.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="img/about6.jpg" data-fancybox="gallery">
+								<img src="img/about6.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="img/about7.jpg" data-fancybox="gallery">
+								<img src="img/about7.jpg">
+							</a>
+						</div>
+						<div class="item">
+							<a href="img/about8.jpg" data-fancybox="gallery">
+								<img src="img/about8.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="photos-link is-lg-hidden">
+						<a>Показать ещё</a>
+					</div>
+					<div class="row">
+						<div class="advantages col-lg-4 is-lg-visible">
+							<div class="item">
+								<div>
+									<img src="img/advantages1.svg">
+								</div>
+								<div>Давно на рынке</div>
+							</div>
+							<div class="item">
+								<div>
+									<img src="img/advantages2.svg">
+								</div>
+								<div>Входим в реестр ЦБ РФ</div>
+							</div>
+							<div class="item">
+								<div>
+									<img src="img/advantages3.svg">
+								</div>
+								<div>Состоим в СРО</div>
+							</div>
+						</div>
+						<div class="docs col-lg-8">
+							<div class="list">
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+								<div class="item">
+									<a href="img/doc.png" data-fancybox="gallery2">
+										<img src="img/doc.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="get-loan is-lg-hidden">
+							<div>
+								<a class="btn btn-base" href="#">Оформить заём</a>
+							</div>
+							<div>
+								<a class="phone" href="tel:+ 7 (495) 126-19-75">+ 7 (495) 126-19-75</a>
+							</div>
+						</div>
+					</div>
+					<div class="is-lg-hidden safely">
+						<h3 class="safely__heading">С нами надежно</h3>
+						<div class="safely__items-wrap">
+							<div class="safely__item">
+								<div class="safely__item-icon">
+									<img src="img/cb_rf.png" alt="">
+								</div>
+								<div class="safely__item-text">Включены в реестр<br>
+									<strong>МФО ЦБ РФ</strong><br>(запись №1703045008571)
+								</div>
+							</div>
+							<div class="safely__item">
+								<div class="safely__item-icon">
+									<img src="img/сро1.png" alt="">
+								</div>
+								<div class="safely__item-text">
+									Состоим в 
+									<strong>СРО “МиР”</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="map-block order-mob-12">
+				<div class="wrap">
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="list tabs2">
+								<h3 class="is-lg-hidden">Где оформить</h3>
+								<div>
+									<select>
+										<option>Санкт-Петербург</option>
+										<option>Санкт-Петербург 2</option>
+										<option>Санкт-Петербург 3</option>
+									</select>
+								</div>
+								<ul class="tabNavigation">
+									<li>
+										<a href="#tab1">Офисы</a>
+									</li>
+									<li>
+										<a href="#tab2">Онлайн-заявка</a>
+									</li>
+									<li>
+										<a href="#tab3">Заказать выезд</a>
+									</li>
+								</ul>
+								<div id="tab1">
+									<h2 class="is-lg-visible">Работаем без выходных</h2>
+									<div class="items">
+										<div class="item">
+											<span class="metro">м. Выставочная (основной офис)</span>							г. Москва, ул. Антонова-Овсенко, д.15, стр.3
+										</div>
+										<div class="item">
+											<span class="metro">м. Маяковская</span>							г. Москва, Оружейный пер., д.13, стр.1
+										</div>
+										<div class="item">
+											<span class="metro">м. Нахимоский Проспект</span>							г. Москва, ул. Одесская, д.2, корп. А
+										</div>
+										<div class="item">
+											<span class="metro">м. Перово</span>							г. Москва, ул. Кусковская, д.12
+										</div>
+										<div class="item">
+											<span class="metro">м. Бабушкинская</span>							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
+										</div>
+									</div>
+									<div class="is-lg-hidden map-section">
+										<img src="img/map.jpg" alt="">
+									</div>
+									<div class="contacts">
+										<div class="links">
+											<div>
+												<a href="#">+7 (495) 156 78 98</a>
+												<a href="#">info@autocash.ru</a>
+											</div>
+											<div class="social">
+												<a href="#">
+													<img src="img/social3.svg">
+												</a>
+												<a href="#">
+													<img src="img/social4.svg">
+												</a>
+											</div>
+										</div>
+										<div class="hours">
+											<span>Без выходных</span>							с 9:00 до 21:00
+										</div>
+									</div>
+								</div>
+								<div id="tab2">
+									<form>
+										<div class="field">
+											<p>сумма займа</p>
+											<input id="amount5" type="text" readonly="">
+										</div>
+										<div id="slider-range-max5"></div>
+										<div class="values flex">
+											<div>50 000 P</div>
+											<div>10 000 000 P</div>
+										</div>
+										<input type="text" placeholder="Ваше имя">
+										<input type="text" placeholder="+7 (___) ___-__-__">
+										<button>Отправить</button>
+									</form>
+									<div class="contacts">
+										<div class="links">
+											<div>
+												<a href="#">+7 (495) 156 78 98</a>
+												<a href="#">info@autocash.ru</a>
+											</div>
+											<div class="social">
+												<a href="#">
+													<img src="img/social3.svg">
+												</a>
+												<a href="#">
+													<img src="img/social4.svg">
+												</a>
+											</div>
+										</div>
+										<div class="hours">
+											<span>Без выходных</span>							с 9:00 до 21:00
+										</div>
+									</div>
+								</div>
+								<div id="tab3">
+									<form>
+										<div class="field">
+											<p>сумма займа</p>
+											<input id="amount4" type="text" readonly="">
+										</div>
+										<div id="slider-range-max4"></div>
+										<div class="values flex">
+											<div>50 000 P</div>
+											<div>10 000 000 P</div>
+										</div>
+										<input type="text" placeholder="Адрес">
+										<input type="text" placeholder="Марка автомобиля">
+										<div class="flex">
+											<input type="text" placeholder="Модель автомобиля">
+											<input type="text" placeholder="Год выпуска">
+											<input type="text" placeholder="Ваше имя">
+											<input type="text" placeholder="+7 (___) ___-__-__">
+										</div>
+										<button>Отправить</button>
+									</form>
+									<div class="contacts">
+										<div class="links">
+											<div>
+												<a href="#">+7 (495) 156 78 98</a>
+												<a href="#">info@autocash.ru</a>
+											</div>
+											<div class="social">
+												<a href="#">
+													<img src="img/social3.svg">
+												</a>
+												<a href="#">
+													<img src="img/social4.svg">
+												</a>
+											</div>
+										</div>
+										<div class="hours">
+											<span>Без выходных</span>							с 9:00 до 21:00
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 is-lg-visible">
+							<div class="map">
+								<div class="item" style="top: 40%; left: 40%;"></div>
+								<div class="item" style="top: 55%; left: 54%;"></div>
+								<div class="item" style="top: 35%; left: 74%;"></div>
+								<button>Проложить маршрут</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pre-footer-block order-mob-13">
+				<div class="wrap">
+					<div class="line"></div>
+					<div class="row pre-footer-row">
+						<div class="item col-lg-4">
+							<h3>Услуги оказывают</h3>
+							<p>					ООО МКК "МультиГлобал" <br>					ОГРН: 5177746069584 </p>
+							<p>					ООО  "Ломбард АвтокапиталЪ" <br>					ОГРН: 1137746165281</p>
+						</div>
+						<div class="item col-lg-4">
+							<h3>Документы</h3>
+							<a href="#">Правила предоставления займов</a><br>
+							<a href="#">Реквизиты ООО МКК «МультиГлобал»</a><br>
+							<a href="#">Свидетельство СРО</a><br>
+							<a href="#">Свидетельство ЦБ РФ</a><br>
+							<a href="#">Политика конфеденциальности</a>
+						</div>
+						<div class="item col-lg-4 pre-footer-contact is-lg-visible">
+							<div>
+								<a class="phone" href="#">+ 7 (495) 126-19-75</a>
+								<button>Позвонить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer order-mob-14">
+				<div class="wrap">
+					<div class="logo">
+						<a href="/">
+							<img src="img/logo.svg">
+						</a>
+					</div>
+					<div class="flex">
+						<div class="contacts">
+							<div class="item">
+								<div>
+									<img src="img/contacts1.svg">
+								</div>
+								<div>Москва, ул. Антонова-Овсеенко, <br>д.15, стр.3</div>
+							</div>
+							<div class="item">
+								<div>
+									<img src="img/contacts2.svg">
+								</div>
+								<div>
+									<a href="#">+7 (495) 241-17-26</a>
+									<a href="#">info@autocash.ru</a>
+								</div>
+							</div>
+						</div>
+						<ul>
+							<li>
+								<a href="#">Займ под ПТС</a>
+							</li>
+							<li>
+								<a href="#">Автозалог</a>
+							</li>
+							<li>
+								<a href="#">Займ для бизнеса</a>
+							</li>
+							<li>
+								<a href="#">Перезалог ПТС</a>
+							</li>
+							<li>
+								<a href="#">Продажа</a>
+							</li>
+							<li>
+								<a href="#">Документы</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="#">Документы</a>
+							</li>
+							<li>
+								<a href="#">Калькулятор</a>
+							</li>
+							<li>
+								<a href="#">О компании</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+						<div class="social">
+							<p>Отвечаем в <br>мессенджерах</p>
+							<a href="#">
+								<img src="img/social3.svg">
+							</a>
+							<a href="#">
+								<img src="img/social4.svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="hot-line-block order-mob-15">
+				<div class="wrap flex">
+					<div class="user">
+						<div>
+							<img src="img/avatar.png">
+						</div>
+						<div>
+							<a class="phone" href="#">8 (945) 156-78-98</a>
+							<span>
+								<i>горячая линия</i>
+							</span>
+						</div>
+					</div>
+					<div class="text">АвтокапиталЪ — удобный сервис по получению займов под залог транспортных средств. <br>				Более 10 лет мы помогаем нашим заемщикам решить их финансовые вопросы</div>
+				</div>
+			</div>
+			<div class="bottom-data-block order-mob-16">
+				<div class="wrap">
+					<div class="row">
+						<div class="item col-lg-4">
+							<h3>Условия выдачи</h3>
+							<p>Сумма займа: от 50 000 рублей до 3 000 000 рублей, до 90% от стоимости автомобиля.</p>
+							<p>Период погашения долга: 12–36 месяцев.</p>
+							<p>Платежи: Заём погашается ежемесячными равными платежами, которые состоят из оплаты основного долга и процентов. Пеня при просрочке начисляется из расчёта 20% на сумму просроченной задолженности.</p>
+							<p>
+								<a class="phone-item" href="#">+7 (495) 241-17-26</a>
+							</p>
+						</div>
+						<div class="item col-lg-4">
+							<h3>Досрочное погашение</h3>
+							<p>Возможно без штрафов в любой день; проценты оплачиваются только за фактический срок пользования деньгами.</p>
+							<p>Минимальная процентная ставка: 30% годовых или 2,5% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.</p>
+							<p>Максимальная процентная ставка: 88% годовых или 6% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.</p>
+						</div>
+						<div class="item col-lg-4">
+							<h3>Пример рассчета</h3>
+							<p>Сумма займа: 100 000 ₽</p>
+							<p>Период погашения долга: 12 месяцев.</p>
+							<p>Проценты: 4,5% в месяц (42% годовых).</p>
+							<p>Ежемесячный платёж: 11 833 ₽</p>
+							<p>Итого к возврату: 142 000 ₽</p>
+							<p>Банк партнёр: ПАО банк «ФК Открытие»</p>
+							<p>Генеральная лицензия банка России № 2209 от 24.11.2014</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

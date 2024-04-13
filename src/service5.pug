@@ -1,0 +1,681 @@
+doctype html
+html
+	head
+		meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+		link(rel='stylesheet' href='css/style.css')
+		link(rel='stylesheet' href='css/slick.css')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+		link(rel='stylesheet' href='https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css')
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css')
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		script(type='text/javascript' src='js/slick.min.js')
+		script(src='js/app.min.js')
+		script(src='https://code.jquery.com/ui/1.13.2/jquery-ui.js')
+		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+		script(src='js/jquery.responsiveTabs.js')
+		script.
+			$( function() {
+			$( "#slider-range-max" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max2" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount2" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max4" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount4" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount4" ).val( $( "#slider-range-max4" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max5" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount5" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
+			} );
+	body
+		.wrapper
+			include includes/header
+			.index-first-block.service2
+				.wrap.big.wrap-first
+					.banner
+						.wrap
+							.text.big
+								.text__inner
+									.top-text
+										span Выгоднее чем в банке
+									h2
+										| Доходность — 
+										span 24%
+										|  годовых
+									p Инвестируй в обеспеченные займы!
+									img.image(src='img/index-first-block12.png')
+			.calc-block.bg
+				.wrap
+					h2.is-lg-hidden Рассчитайте доход
+					.row
+						.item.big.col-lg-6.calc-service5
+							.field
+								p сумма займа
+								input#amount(type='text' readonly='')
+							#slider-range-max
+							.values.flex
+								div 50 000 P
+								div 10 000 000 P
+							.selects
+								.item
+									p срок инвестиций
+									.select
+										input#r1.radio(type='radio' name='select1')
+										label(for='r1') 6м
+										input#r2.radio(type='radio' name='select1' checked='')
+										label(for='r2') 12м
+										input#r3.radio(type='radio' name='select1')
+										label(for='r3') 24м
+								.item
+									p Выплата процентов
+									.select
+										input#r4.radio(type='radio' name='select2' checked='')
+										label(for='r4') Ежемесячно
+										input#r5.radio(type='radio' name='select2')
+										label(for='r5') В конце срока
+						.col-lg-6
+							.result2
+								.flex
+									.item
+										span 12 500 ₽
+										| 							Доход в месяц
+									.item
+										span от 30%
+										| 							% ставка
+									.item
+										span 575 500 ₽
+										| 							Доход за год
+								.button
+									button Оформить заявку
+									a(href='#') Все процентные ставки
+			.targets-block
+				.list
+					.wrap
+						.row
+							.item.col-lg-4
+								div
+									img(src='img/target16.svg')
+								div
+									span Займы на 100% обеспечены реальными залогами (авто)
+							.item.col-lg-4
+								div
+									img(src='img/target17.svg')
+								div
+									span Досрочный возврат средств без потери доходности
+							.item.col-lg-4
+								div
+									img(src='img/target18.svg')
+								div
+									span Доход в три раза выше, чем по банковскому вкладу
+			.invest-block
+				.wrap
+					.content
+						.row
+							.col-lg-4
+								h2
+									span Инвестиции
+									|  в автозаймы
+							.col-lg-4.item
+								div
+									img(src='img/check.svg')
+								div Ваша прибыль в три раза выше, чем по банковскому вкладу
+							.item.col-lg-4
+								div
+									img(src='img/check.svg')
+								div Досрочный возврат средств без потери доходности
+			.credit-info-block
+				.wrap
+					.row
+						.col-lg-6
+							.item
+								h2.heading-medium Простые условия
+								.info
+									.data
+										.data-item.flex
+											div Минимальная сумма инвестиций
+											div 100 000 рублей
+										.data-item.flex
+											div Максимальная сумма инвестиций
+											div Ограничений нет
+										.data-item.flex
+											div Срок инвестирования
+											div 1, 3, 6, 12 месяцев
+										.data-item.flex
+											div Ставка
+											div 28–34% годовых
+										.data-item.flex
+											div Выплата процентов
+											div Ежемесячно или в конце срока
+										.data-item.flex
+											div Частичное пополнение займа
+											div Возможно от 100 000 рублей
+										.data-item.flex
+											div Досрочный возврат займа
+											div Возможен с уведомлением за 1 месяц
+										.data-item.flex
+											div Пролонгация займа
+											div Возможна автоматическая пролонгация
+										.data-item.flex
+											div Инвестор
+											div Любое юридическое лицо
+						.col-lg-6
+							.item
+								h2.heading-medium Выгодные ставки
+								.info
+									table
+										thead
+											tr
+												td Срок инвестирования
+												td 6 мес.
+												td 12 мес.
+												td 24 мес.
+										tbody
+											tr
+												td Выплата ежемесячно
+												td 29%
+												td 30%
+												td 30%
+											tr
+												td Выплата в конце срока
+												td 30%
+												td 32%
+												td 34%
+			.page-form
+				.wrap
+					.form.flex
+						form
+							h3.heading-h3 Возникли вопросы?
+							.form-main
+								input(type='text' placeholder='Имя')
+								input(type='text' placeholder='+7 (___) ___-__-__')
+								button Отправить заявку
+								.bottom-text
+									| Нажимая на кнопку, я соглашаюсь с 
+									a(href='#') политикой конфиденциальности
+						.image
+			.advantages-block3
+				.wrap
+					h3.heading-h3 Преимущества инвестиций в АвтокапиталЪ
+					.list
+						.row
+							.col-lg-5
+								.item
+									.advantages-block3-img
+										img(src='img/advantages14.jpg')
+									h3 Возможно инвестировать небольшую сумму
+									| 					Мы работаем с различными инвесторами и готовы принимать небольшие суммы инвестиций от 100 000 рублей.
+							.col-lg-7
+								.item
+									.advantages-block3-img
+										img(src='img/advantages15.jpg')
+									h3 Досрочный возврат займа без потери доходности
+									| 					Если вы решите забрать вложенные деньги до окончания срока займа, понижения ставки не будет. Проценты будут выплачены исходя из фактического срока размещения денежных средств.
+							.col-lg-7
+								.item
+									.advantages-block3-img
+										img(src='img/advantages16.jpg')
+									h3 Надёжные инвестиции, обеспеченные залогом
+									| 					Все займы АвтокапиталЪ обеспечены залогом — автомобилями. Как правило, стоимость залога в 2 раза превышает сумма займа. Если заёмщик прекращает обслуживать займ, то залог реализуется и покрывает задолженность.
+							.col-lg-5
+								.item
+									.advantages-block3-img
+										img(src='img/advantages17.jpg')
+									h3 Доходность значительно выше чем в банке
+									| 					Нашим инвесторам мы выплачиваем проценты по ставке до 34% годовых, что в три раза выше, чем по депозиту в банке.
+			.steps-block
+				.wrap
+					h2 Как оформить?
+					.row.steps-block-row
+						.col-lg-4.is-lg-visible
+							.phone-form
+								img(src='img/phone.png')
+								.logo
+									img(src='img/logo2.svg')
+								form
+									p Получите одобрение прямо сейчас в Whatsapp
+									input(type='text' placeholder='+7 (___) ___-__-__')
+									button Получить деньги
+						.col-lg-7.offset-lg-1
+							.content
+								h2.is-lg-visible Всё очень просто!
+								.list
+									.item
+										.step
+											| 1 шаг
+											span 2 минуты
+										h3 Оставьте заявку
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+									.item
+										.step
+											| 2 шаг
+											span 3 минуты
+										h3 Оставьте заявку 22
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+									.item
+										.step
+											| 3 шаг
+											span 22 минуты
+										h3 Оставьте заявку 33
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+			.order-block
+				.wrap
+					h3.heading-h3 Заявка на договор
+					.top-text
+						| инвестиционного займа
+					.content.flex
+						.calc
+							div
+								.field
+									p сумма инвестиций
+									input#amount2(type='text' readonly='')
+								#slider-range-max2
+								.values.flex
+									div 50 000 P
+									div 10 000 000 P
+							.selects
+								.item
+									p срок инвестиций
+									.select
+										input#r11.radio(type='radio' name='select3')
+										label(for='r11') 6м
+										input#r12.radio(type='radio' name='select3' checked='')
+										label(for='r12') 12м
+										input#r13.radio(type='radio' name='select3')
+										label(for='r13') 24м
+								.item
+									p Выплата процентов
+									.select
+										input#r14.radio(type='radio' name='select4' checked='')
+										label(for='r14') Ежемесячно
+										input#r15.radio(type='radio' name='select4')
+										label(for='r15') В конце срока
+						form
+							input(type='text' placeholder='Ваше имя')
+							input(type='text' placeholder='+7 (___) ___-__-__')
+							input(type='text' placeholder='Название компании')
+							button Оформить заявку
+			.about-block.order-mob-9
+				.wrap
+					h2 О компании
+					.row
+						.col-lg-5.top-text
+							p
+								| Финансовая группа Автокапиталъ входит в число ведущих компаний на рынке микрофинансирования в России
+							p
+								span На протяжении 10 лет
+								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
+						.top-counts.flex.col-lg-6.offset-lg-1
+							.item
+								span 10 лет
+								| 						на рынке
+							.item
+								span 72%
+								| 						обращаются повторно
+							.item
+								span 1 500 000 000 ₽
+								| 						выданных займов
+					.photos
+						.item
+							a(href='img/about1.jpg' data-fancybox='gallery')
+								img(src='img/about1.jpg')
+						.item
+							a(href='img/about2.jpg' data-fancybox='gallery')
+								img(src='img/about2.jpg')
+						.item
+							a(href='img/about3.jpg' data-fancybox='gallery')
+								img(src='img/about3.jpg')
+						.item.big
+							a(href='img/about4.jpg' data-fancybox='gallery')
+								img(src='img/about4.jpg')
+						.item.big
+							a(href='img/about5.jpg' data-fancybox='gallery')
+								img(src='img/about5.jpg')
+						.item
+							a(href='img/about6.jpg' data-fancybox='gallery')
+								img(src='img/about6.jpg')
+						.item
+							a(href='img/about7.jpg' data-fancybox='gallery')
+								img(src='img/about7.jpg')
+						.item
+							a(href='img/about8.jpg' data-fancybox='gallery')
+								img(src='img/about8.jpg')
+					.photos-link.is-lg-hidden
+						a Показать ещё
+					.row
+						.advantages.col-lg-4.is-lg-visible
+							.item
+								div
+									img(src='img/advantages1.svg')
+								div Давно на рынке
+							.item
+								div
+									img(src='img/advantages2.svg')
+								div Входим в реестр ЦБ РФ
+							.item
+								div
+									img(src='img/advantages3.svg')
+								div Состоим в СРО
+						.docs.col-lg-8
+							.list
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+						.get-loan.is-lg-hidden
+							div
+								a(href="#").btn.btn-base Оформить заём
+							div
+								a(href="tel:+ 7 (495) 126-19-75").phone + 7 (495) 126-19-75
+					.is-lg-hidden.safely
+						h3.safely__heading С нами надежно
+						.safely__items-wrap
+							.safely__item
+								.safely__item-icon
+									img(src="img/cb_rf.png", alt="")
+								.safely__item-text Включены в реестр
+									br
+									strong МФО ЦБ РФ
+									br
+									| (запись №1703045008571)
+							.safely__item
+								.safely__item-icon
+									img(src="img/сро1.png", alt="")
+								.safely__item-text Состоим в 
+									|
+									strong СРО “МиР”
+			.faq-block.inner2
+				.wrap
+					.content
+						h3.heading-h3 Часто задаваемые вопросы
+						.row
+							.col-lg-7
+								.list
+									.item
+										.name
+											| Возможно получить кредит под залог автомобиля не являясь его собственником?
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+									.item
+										.name
+											| Почему в интернете такие плохие отзывы на другие автоломбарды
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+									.item
+										.name
+											| Почему в интернете такие плохие отзывы на услуги автоломбардов?
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+									.item
+										.name
+											| Возможно получить кредит под залог автомобиля не являясь его собственником?
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+									.item
+										.name
+											| Возможно получить кредит под залог автомобиля не являясь его собственником?
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+									.item
+										.name
+											| Условия погашения займа
+										.text
+											p
+												| Да, вы можете получить займ по программе «Автоломбард», при наличии генеральной доверенности от владельца автомобиля. В доверенности должны быть прописаны право залога и передоверия.
+											.author
+												| Администратор
+							.col-lg-5.is-lg-visible
+								.banners
+									img.img(src='img/faq.jpg' width="470")
+			.map-block.order-mob-10
+				.wrap
+					.row
+						.col-lg-5
+							.list.tabs2
+								h3.is-lg-hidden Контакты
+								#tab1
+									h2.is-lg-visible Контакты
+									.items
+										.item
+											span.metro м. Выставочная (основной офис)
+											| 							г. Москва, ул. Антонова-Овсенко, д.15, стр.3
+										.item
+											span.metro м. Маяковская
+											| 							г. Москва, Оружейный пер., д.13, стр.1
+										.item
+											span.metro м. Нахимоский Проспект
+											| 							г. Москва, ул. Одесская, д.2, корп. А
+										.item
+											span.metro м. Перово
+											| 							г. Москва, ул. Кусковская, д.12
+										.item
+											span.metro м. Бабушкинская
+											| 							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
+									.is-lg-hidden.map-section
+										img(src="img/map.jpg", alt="")
+									.contacts
+										.links
+											div
+												a(href='#') +7 (495) 156 78 98
+												a(href='#') info@autocash.ru
+											.social
+												a(href='#')
+													img(src='img/social3.svg')
+												a(href='#')
+													img(src='img/social4.svg')
+										.hours
+											span Без выходных
+											| 							с 9:00 до 21:00
+						.col-lg-7.is-lg-visible
+							.map
+								.item(style='top: 40%; left: 40%;')
+								.item(style='top: 55%; left: 54%;')
+								.item(style='top: 35%; left: 74%;')
+								button Проложить маршрут
+			.pre-footer-block.order-mob-11
+				.wrap
+					.line
+					.row.pre-footer-row
+						.item.col-lg-4
+							h3 Услуги оказывают
+							p 					ООО МКК "МультиГлобал" 
+								br
+								| 					ОГРН: 5177746069584 
+							p 					ООО  "Ломбард АвтокапиталЪ" 
+								br
+								| 					ОГРН: 1137746165281
+						.item.col-lg-4
+							h3 Документы
+							a(href='#') Правила предоставления займов
+							br
+							a(href='#') Реквизиты ООО МКК «МультиГлобал»
+							br
+							a(href='#') Свидетельство СРО
+							br
+							a(href='#') Свидетельство ЦБ РФ
+							br
+							a(href='#') Политика конфеденциальности
+						.item.col-lg-4.pre-footer-contact.is-lg-visible
+							div
+								a.phone(href='#') + 7 (495) 126-19-75
+								button Позвонить
+			footer.footer.order-mob-12
+				.wrap
+					.logo
+						a(href='/')
+							img(src='img/logo.svg')
+					.flex
+						.contacts
+							.item
+								div
+									img(src='img/contacts1.svg')
+								div
+									| Москва, ул. Антонова-Овсеенко, 
+									br
+									| д.15, стр.3
+							.item
+								div
+									img(src='img/contacts2.svg')
+								div
+									a(href='#') +7 (495) 241-17-26
+									a(href='#') info@autocash.ru
+						ul
+							li
+								a(href='#') Займ под ПТС
+							li
+								a(href='#') Автозалог
+							li
+								a(href='#') Займ для бизнеса
+							li
+								a(href='#') Перезалог ПТС
+							li
+								a(href='#') Продажа
+							li
+								a(href='#') Документы
+						ul
+							li
+								a(href='#') Документы
+							li
+								a(href='#') Калькулятор
+							li
+								a(href='#') О компании
+							li
+								a(href='#') Контакты
+						.social
+							p
+								| Отвечаем в 
+								br
+								| мессенджерах
+							a(href='#')
+								img(src='img/social3.svg')
+							a(href='#')
+								img(src='img/social4.svg')
+			.hot-line-block.order-mob-13
+				.wrap.flex
+					.user
+						div
+							img(src='img/avatar.png')
+						div
+							a.phone(href='#') 8 (945) 156-78-98
+							span
+								i горячая линия
+					.text
+						| АвтокапиталЪ — удобный сервис по получению займов под залог транспортных средств. 
+						br
+						| 				Более 10 лет мы помогаем нашим заемщикам решить их финансовые вопросы
+			.bottom-data-block.order-mob-14
+				.wrap
+					.row
+						.item.col-lg-4
+							h3 Условия выдачи
+							p
+								| Сумма займа: от 50 000 рублей до 3 000 000 рублей, до 90% от стоимости автомобиля.
+							p Период погашения долга: 12–36 месяцев.
+							p
+								| Платежи: Заём погашается ежемесячными равными платежами, которые состоят из оплаты основного долга и процентов. Пеня при просрочке начисляется из расчёта 20% на сумму просроченной задолженности.
+							p
+								a.phone-item(href='#') +7 (495) 241-17-26
+						.item.col-lg-4
+							h3 Досрочное погашение
+							p
+								| Возможно без штрафов в любой день; проценты оплачиваются только за фактический срок пользования деньгами.
+							p
+								| Минимальная процентная ставка: 30% годовых или 2,5% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+							p
+								| Максимальная процентная ставка: 88% годовых или 6% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+						.item.col-lg-4
+							h3 Пример рассчета
+							p Сумма займа: 100 000 ₽
+							p Период погашения долга: 12 месяцев.
+							p Проценты: 4,5% в месяц (42% годовых).
+							p Ежемесячный платёж: 11 833 ₽
+							p Итого к возврату: 142 000 ₽
+							p Банк партнёр: ПАО банк «ФК Открытие»
+							p Генеральная лицензия банка России № 2209 от 24.11.2014

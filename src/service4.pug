@@ -1,0 +1,905 @@
+doctype html
+html
+	head
+		meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+		link(rel='stylesheet' href='css/style.css')
+		link(rel='stylesheet' href='css/slick.css')
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+		link(rel='stylesheet' href='https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css')
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css')
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		script(type='text/javascript' src='js/slick.min.js')
+		script(src='js/app.min.js')
+		script(src='https://code.jquery.com/ui/1.13.2/jquery-ui.js')
+		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+		script(src='js/jquery.responsiveTabs.js')
+		script.
+			$( function() {
+			$( "#slider-range-max" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max2" ).slider({
+			range: "max",
+			min: 1,
+			max: 36,
+			value: 18,
+			slide: function( event, ui ) {
+			$( "#amount2" ).val( ui.value + " мес.");
+			}
+			});
+			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " мес." );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max4" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount4" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount4" ).val( $( "#slider-range-max4" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max5" ).slider({
+			range: "max",
+			min: 50000,
+			max: 10000000,
+			step: 5000,
+			value: 5000000,
+			slide: function( event, ui ) {
+			$( "#amount5" ).val( ui.value + " ₽");
+			}
+			});
+			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
+			} );
+	body
+		.wrapper
+			include includes/header
+			.index-first-block.service3.order-mob-1
+					.wrap.big.wrap-first
+						.banner
+							.wrap
+								.text
+									.text__inner
+										h2
+											| Ваш автоломбард 
+											span в Москве
+										p
+											| Честно. Надёжно. Онлайн. 
+											span
+												i В реестре ЦБ РФ
+										img.image(src='img/index-first-block10.png')
+										.pre-form.is-lg-visible
+											span Введите свой номер и получите до 5 млн ₽ за 30 минут
+										.pre-form.is-lg-hidden
+											span До 10 млн ₽ за 30 минут
+										form.index-first-block__form
+											input(type='text' placeholder='+7 (___) ___-__-__')
+											button Получить деньги
+										.bottom-text
+											| Нажимая на кнопку я соглашаюсь с 
+											a(href="#") политикой конфиденциальности
+			.calc-block.order-mob-2
+				.wrap
+					h2.is-lg-hidden Рассчитайте платёж
+					.row
+						.item.col-lg-4
+							.field
+								p сумма займа
+								input#amount(type='text' readonly='')
+							#slider-range-max
+							.values.flex
+								div 50 000 P
+								div 10 000 000 P
+						.item.col-lg-4
+							.field
+								p срок займа
+								input#amount2(type='text' readonly='')
+							#slider-range-max2
+							.values.flex
+								div 1 мес.
+								div 36 мес.
+						.result.col-lg-4
+							.top.flex
+								.top-item
+									p
+										| от 
+										span 27 000
+										|  ₽
+									| 							Ежемесячный платеж
+								.line
+								.top-item
+									p
+										| от 
+										span 2
+										|  %
+									| 							Ставка в месяц
+							.agree
+								.link.is-lg-visible
+									a(href='#') График платежей
+					.bottom-button
+						button Оформить
+						.is-lg-hidden
+							a(href="#").link-plan График платежей
+			.targets-block.order-mob-3
+				.list
+					.wrap
+						h2.is-lg-hidden Преимущества автоломбарда
+						.row
+							.item.col-lg-4
+								div
+									img(src='img/target13.svg')
+								div
+									span 100% одобрение
+									| 							С любой кредитной историей
+							.item.col-lg-4
+								div
+									img(src='img/target14.svg')
+								div
+									span Низкая ставка
+									| 							Минимальная ставка в Москве
+							.item.col-lg-4
+								div
+									img(src='img/target15.svg')
+								div
+									span Максимальная сумма
+									| 							Выдаём до 90% от стоимости авто
+			.technic-block.order-mob-7
+				.wrap
+					h2 Под залог любой техники
+					.list.row
+						.col-lg-5
+							a.item(href='#')
+								.technic-item-img
+									img(src='img/technic1.png')
+								.technic-heading Лёгковые авто
+						.col-lg-7
+							a.item(href='#')
+								.technic-item-img
+									img(src='img/technic2.png')
+								.technic-heading Спецтехнику
+						.col-lg-4
+							a.item.item--special(href='#')
+								.technic-item-img
+									img(src='img/technic3.png')
+								.technic-heading Грузовые авто
+						.col-lg-4
+							a.item(href='#')
+								.technic-item-img
+									img(src='img/technic4.png')
+								.technic-heading Мототехнику
+						.col-lg-4
+							a.item.item--special(href='#')
+								.technic-item-img
+									img(src='img/technic5.png')
+								.technic-heading Водный транспорт
+			.advantage-item.advantage-item--mod-offset.is-lg-hidden.order-mob-8
+				.wrap
+					h2.advantage-item__heading  Выдаём 
+						br
+						| залоговый билет
+					.advantage-item__item
+						.advantage-item__item-img
+							img(src="img/advantages12.jpg", alt="")
+						.advantage-item__item-section
+							.advantage-item__item-text
+								p Работаем легально и соблюдаем все требования ЦБ РФ.
+								p Наш клиент всегда получает свой экземпляр залогового билета, в котором прописаны оценочная стоимость залога, сумма займа и его условия.
+			.steps-block.order-mob-4
+				.wrap
+					h2 Как оформить?
+					.row.steps-block-row
+						.col-lg-4.is-lg-visible
+							.phone-form
+								img(src='img/phone.png')
+								.logo
+									img(src='img/logo2.svg')
+								form
+									p Получите одобрение прямо сейчас в Whatsapp
+									input(type='text' placeholder='+7 (___) ___-__-__')
+									button Получить деньги
+						.col-lg-7.offset-lg-1
+							.content
+								h2.is-lg-visible Всё очень просто!
+								.list
+									.item
+										.step
+											| 1 шаг
+											span 2 минуты
+										h3 Оставьте заявку
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+									.item
+										.step
+											| 2 шаг
+											span 3 минуты
+										h3 Оставьте заявку 22
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+									.item
+										.step
+											| 3 шаг
+											span 22 минуты
+										h3 Оставьте заявку 33
+										p можно на сайте, по телефону или через мессенджер
+										.social
+											a(href='#')
+												img(src='img/social3.svg')
+											a(href='#')
+												img(src='img/social4.svg')
+			.advantages-block2.is-lg-visible
+				.wrap
+					h2 Преимущества
+					.top-text
+						| Самые распространённые проблемы с которыми сталкиваются наши клиенты при кредитовании — у нас есть решение!
+					.list.other.row
+						.col-lg-4
+							.item-name Работаем с юридическими лицами
+							.item
+								.advantages-img
+									img(src='img/advantages11.jpg')
+								.info
+									h3 Тёплый охраняемый паркинг
+									p Автомобили хранятся на отапливаемой стоянке с видеонаблюдением
+									button Подробнее
+						.col-lg-4
+							.item-name Онлайн решение
+							.item
+								.advantages-img
+									img(src='img/advantages12.jpg')
+								.info
+									h3 Выдаём залоговый билет
+									p Официальный договор займа по стандартам ЦБ РФ с льготным периодом
+									button Заказать выезд
+						.col-lg-4
+							.item-name Бесплатный выезд для оформления займа
+							.item
+								.advantages-img
+									img(src='img/advantages13.jpg')
+								.info
+									h3 Онлайн решение
+									p
+										| Отправьте фото ПТС и паспорта на наш WhatsApp или Telegram и через 15 минут сообщим решение
+									button Написать
+			.last-credits-block.last-credits-block--margin-mob.order-mob-5
+				.wrap
+					.last-credits-row.row
+						.text.col-lg-6
+							h2 Недавно выданные займы
+							.info
+								p BMW 528 F10
+								p 2010 г.в., 93 000 км, 3 000 см3, автомат
+								p Оценка: 1 150 000 ₽
+							.data
+								.item
+									span
+										i Наше предложение
+									.price
+										| 850 000 ₽
+									| 						под 4,5% в месяц
+								.item
+									span.other
+										i Другие
+									.price
+										| 700 000 ₽
+									| 						под 6% в месяц
+						.col-lg-6
+							.photos
+								.item
+									img(src='img/last-credit.jpg')
+								.item
+									img(src='img/last-credit.jpg')
+								.item
+									img(src='img/last-credit.jpg')
+								.item
+									img(src='img/last-credit.jpg')
+								.item
+									img(src='img/last-credit.jpg')
+								.item
+									img(src='img/last-credit.jpg')
+			.advantage-item.is-lg-hidden.order-mob-6.advantage-item--mod-offset2
+				.wrap
+					.advantage-item__item
+						.advantage-item__item-img
+							img(src="img/parking.jpg", alt="")
+						.advantage-item__item-section
+							h3.advantage-item__item-heading Тёплый охраняемый паркинг
+							.advantage-item__item-text Автомобили хранятся на крытой, отапливаемой стоянке. Территория охраняется и находится под видеонаблюдением.
+			.conditions-block.order-mob-9
+				.wrap
+					h2 Условия
+					#tabs.tabs
+						ul
+							li
+								a(href='#t1') Документы
+							li
+								a(href='#t2') Основные условия
+							li
+								a(href='#t3') Требования
+							li
+								a(href='#t4') Способы получения
+							li
+								a(href='#t5') Способы погашения
+						#t1.tab-content
+							.list.row
+								.col-lg-4.item
+									img(src='img/condition1.png')
+									h3 Паспорт
+								.col-lg-4.item
+									img(src='img/condition2.png')
+									h3 ПТС
+									| 							Бумажный или электронный
+								.col-lg-4.item
+									img(src='img/condition3.png')
+									h3 СТС
+						#t2.tab-content
+							| 222
+						#t3.tab-content.other
+							.list2.row
+								.col-lg-6
+									.list-item
+										.row
+											.col-lg-6
+												.item3
+													h3 Заемщик
+													ol
+														li Физическое или юридическое лицо
+														li Гражданство РФ или иностранное
+														li Авто в собственности или представитель по генеральной доверенности
+														li Без справок о доходах
+														li С любой кредитной историей
+											.col-lg-6
+												.item3
+													h3 Залог
+													ol
+														li
+															| Любые транспортные средства (легковые, грузовые, спецтехника, мототехника, водный транспорт)
+														li Любого года выпуска
+														li Зарегистрированные на территории РФ
+														li Не требуется КАСКО
+								.col-lg-6
+									.list-item.other
+										h3.w100 Документы
+										.row
+											.col-lg-6
+												.item3
+													h4 для физлиц
+													ol
+														li Паспорт
+														li ПТС (бумажный или электронный)
+														li СТС
+														li Генеральная доверенность (если оформляет не собственник)
+											.col-lg-6
+												.item3
+													h4 для юрлиц
+													ol
+														li Паспорт ген. директора
+														li ПТС (бумажный или электронный)
+														li СТС
+														li Скан устава компании
+														li Реквизиты компании
+						#t4.tab-content
+							| 444
+						#t5.tab-content
+							| 555
+			.consult-block.is-lg-visible
+				.wrap
+					.consult-block__row.row
+						.col-lg-5.consult-block__img
+							img(src="img/consult-block.jpg", alt="")
+						.consult-block__main.col-lg-7.col-xl-5.offset-xl-1
+							span.top-text
+								i Задать вопрос сотруднику
+							h2 Консультация
+							p Расскажем подробнее, рассчитаем платёж, ответим на вопросы
+							.buttons.flex
+								button
+									img(src='img/consult.svg')
+									span
+										| Написать 
+										br
+										| в WhatsApp
+								button
+									img(src='img/consult2.svg')
+									span
+										| Написать 
+										br
+										| в Telegram
+								button Позвонить
+			.not-ready-block.order-mob-9
+				.wrap
+					.content
+						h2 Не готовы оставить авто?
+						p У нас есть решение
+						a(href='#') Подробнее
+			.program-block.program-block--mod-bg-white.order-mob-10
+				.wrap
+					h2 Другие программы займов
+					.top-text
+						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
+					.list.row
+						.col-lg-4
+							.item
+								img(src='img/program1.jpg')
+								.text
+									| Займы под 
+									br
+									| авто
+						.col-lg-4
+							.item
+								img(src='img/program2.jpg')
+								.text
+									| Займы для 
+									br
+									| бизнеса
+						.col-lg-4
+							.item
+								img(src='img/program4.jpg')
+								.text
+									| Рефинансирование 
+									br
+									| займов
+			.form-request.order-mob-11.is-lg-hidden.wrap
+				h3.heading-h3 Отправить заявку
+				.form-request__img
+					img(src="img/side-view-young-handsome-man-using-cell-phone-car.jpg", alt="")
+				input(type='text' placeholder='+7 (___) ___-__-__')
+				button Отправить
+				.bottom-text
+					| Нажимая на кнопку я соглашаюсь с 
+					a(href="#") политикой конфиденциальности
+			.about-block.order-mob-12
+				.wrap
+					h2 О компании
+					.row
+						.col-lg-5.top-text
+							p
+								| Финансовая группа Автокапиталъ входит в число ведущих компаний на рынке микрофинансирования в России
+							p
+								span На протяжении 10 лет
+								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
+						.top-counts.flex.col-lg-6.offset-lg-1
+							.item
+								span 10 лет
+								| 						на рынке
+							.item
+								span 72%
+								| 						обращаются повторно
+							.item
+								span 1 500 000 000 ₽
+								| 						выданных займов
+					.photos
+						.item
+							a(href='img/about1.jpg' data-fancybox='gallery')
+								img(src='img/about1.jpg')
+						.item
+							a(href='img/about2.jpg' data-fancybox='gallery')
+								img(src='img/about2.jpg')
+						.item
+							a(href='img/about3.jpg' data-fancybox='gallery')
+								img(src='img/about3.jpg')
+						.item.big
+							a(href='img/about4.jpg' data-fancybox='gallery')
+								img(src='img/about4.jpg')
+						.item.big
+							a(href='img/about5.jpg' data-fancybox='gallery')
+								img(src='img/about5.jpg')
+						.item
+							a(href='img/about6.jpg' data-fancybox='gallery')
+								img(src='img/about6.jpg')
+						.item
+							a(href='img/about7.jpg' data-fancybox='gallery')
+								img(src='img/about7.jpg')
+						.item
+							a(href='img/about8.jpg' data-fancybox='gallery')
+								img(src='img/about8.jpg')
+					.photos-link.is-lg-hidden
+						a Показать ещё
+					.row
+						.advantages.col-lg-4.is-lg-visible
+							.item
+								div
+									img(src='img/advantages1.svg')
+								div Давно на рынке
+							.item
+								div
+									img(src='img/advantages2.svg')
+								div Входим в реестр ЦБ РФ
+							.item
+								div
+									img(src='img/advantages3.svg')
+								div Состоим в СРО
+						.docs.col-lg-8
+							.list
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+								.item
+									a(href='img/doc.png' data-fancybox='gallery2')
+										img(src='img/doc.png')
+						.get-loan.is-lg-hidden
+							div
+								a(href="#").btn.btn-base Оформить заём
+							div
+								a(href="tel:+ 7 (495) 126-19-75").phone + 7 (495) 126-19-75
+					.is-lg-hidden.safely
+						h3.safely__heading С нами надежно
+						.safely__items-wrap
+							.safely__item
+								.safely__item-icon
+									img(src="img/cb_rf.png", alt="")
+								.safely__item-text Включены в реестр
+									br
+									strong МФО ЦБ РФ
+									br
+									| (запись №1703045008571)
+							.safely__item
+								.safely__item-icon
+									img(src="img/сро1.png", alt="")
+								.safely__item-text Состоим в 
+									|
+									strong СРО “МиР”
+			.reviews-block.order-mob-12
+				.wrap
+					.flex
+						h2
+							| Нам доверяют 
+							span
+								i В реестре ЦБ РФ
+						button.top-button Оставить отзыв
+					.row
+						.list.col-lg-4
+							.item
+								.video
+									img(src='img/review1.jpg')
+									a.play(href='#')
+							.item
+								.name
+									| Вячеслав, ИП, Москва
+								p
+									| Отношение сотрудников вежливое и учтивoе, отвечают развёрнуто и на понятном языке. Деньги выдали сразу же пoсле того, как заложил мaшину, в размере 400 тыс. рублей. Дaлее все пoгасил и вернул свoю машину, прoблем с этим не вoзникло. Рекoмендую к обращению.
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+							.item
+								.name
+									| Александра Р
+								p Все супер. Быстро и надёжно
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+							.item
+								.video
+									img(src='img/review2.jpg')
+									a.play(href='#')
+						.list.col-lg-4
+							.item
+								.name
+									| Александра Р
+								p
+									| Как хорошо, когда берёшь кредит под залог автомобиля, а тебе не «любят» мозг справками, страховками, кредитными историями, обращениями к независимым оценщикам. «Автокапитал» делает все быстро и на месте: пригнал машину, оценили, подписали договор, выдали деньги. Что важно: на все про все ушло меньше часа. Все б так работали, легче жить было бы.
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+							.item
+								.video
+									img(src='img/review3.jpg')
+									a.play(href='#')
+							.item
+								.name
+									| Мария Т
+								p
+									| Смогла быстро получить займ под залог ПТС. Сотрудники дали хорошую консультацию и все объяснили. Процент очень адекватный и не смогла найти никаких подводных камней!
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+						.list.col-lg-4
+							.item
+								.video
+									img(src='img/review4.jpg')
+									a.play(href='#')
+							.item
+								.name
+									| Татьяна П
+								p Обращалась в экстренной ситуации. Быстро помогли. Отличный коллегтив. Спасибо
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+							.item
+								.name
+									| Степан С
+								p
+									| Смогла быстро получить займ под залог ПТС. Сотрудники дали хорошую консультацию и все объяснили. Процент очень адекватный и не смогла найти никаких подводных камней!
+								.flex
+									.author
+										| Источник: 
+										a(href='#') Яндекс
+									.date
+										| 12 декабря 2019
+					.bottom-link
+						a(href='#') Показать ещё
+			.map-block.order-mob-13
+				.wrap
+					.row
+						.col-lg-5
+							.list.tabs2
+								h3.is-lg-hidden Где оформить
+								div
+									select
+										option Санкт-Петербург
+										option Санкт-Петербург 2
+										option Санкт-Петербург 3
+								ul.tabNavigation
+									li
+										a(href='#tab1') Офисы
+									li
+										a(href='#tab2') Онлайн-заявка
+									li
+										a(href='#tab3') Заказать выезд
+								#tab1
+									h2.is-lg-visible Работаем без выходных
+									.items
+										.item
+											span.metro м. Выставочная (основной офис)
+											| 							г. Москва, ул. Антонова-Овсенко, д.15, стр.3
+										.item
+											span.metro м. Маяковская
+											| 							г. Москва, Оружейный пер., д.13, стр.1
+										.item
+											span.metro м. Нахимоский Проспект
+											| 							г. Москва, ул. Одесская, д.2, корп. А
+										.item
+											span.metro м. Перово
+											| 							г. Москва, ул. Кусковская, д.12
+										.item
+											span.metro м. Бабушкинская
+											| 							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
+									.is-lg-hidden.map-section
+										img(src="img/map.jpg", alt="")
+									.contacts
+										.links
+											div
+												a(href='#') +7 (495) 156 78 98
+												a(href='#') info@autocash.ru
+											.social
+												a(href='#')
+													img(src='img/social3.svg')
+												a(href='#')
+													img(src='img/social4.svg')
+										.hours
+											span Без выходных
+											| 							с 9:00 до 21:00
+								#tab2
+									form
+										.field
+											p сумма займа
+											input#amount5(type='text' readonly='')
+										#slider-range-max5
+										.values.flex
+											div 50 000 P
+											div 10 000 000 P
+										input(type='text' placeholder='Ваше имя')
+										input(type='text' placeholder='+7 (___) ___-__-__')
+										button Отправить
+									.contacts
+										.links
+											div
+												a(href='#') +7 (495) 156 78 98
+												a(href='#') info@autocash.ru
+											.social
+												a(href='#')
+													img(src='img/social3.svg')
+												a(href='#')
+													img(src='img/social4.svg')
+										.hours
+											span Без выходных
+											| 							с 9:00 до 21:00
+								#tab3
+									form
+										.field
+											p сумма займа
+											input#amount4(type='text' readonly='')
+										#slider-range-max4
+										.values.flex
+											div 50 000 P
+											div 10 000 000 P
+										input(type='text' placeholder='Адрес')
+										input(type='text' placeholder='Марка автомобиля')
+										.flex
+											input(type='text' placeholder='Модель автомобиля')
+											input(type='text' placeholder='Год выпуска')
+											input(type='text' placeholder='Ваше имя')
+											input(type='text' placeholder='+7 (___) ___-__-__')
+										button Отправить
+									.contacts
+										.links
+											div
+												a(href='#') +7 (495) 156 78 98
+												a(href='#') info@autocash.ru
+											.social
+												a(href='#')
+													img(src='img/social3.svg')
+												a(href='#')
+													img(src='img/social4.svg')
+										.hours
+											span Без выходных
+											| 							с 9:00 до 21:00
+						.col-lg-7.is-lg-visible
+							.map
+								.item(style='top: 40%; left: 40%;')
+								.item(style='top: 55%; left: 54%;')
+								.item(style='top: 35%; left: 74%;')
+								button Проложить маршрут
+			.pre-footer-block.order-mob-14
+				.wrap
+					.line
+					.row.pre-footer-row
+						.item.col-lg-4
+							h3 Услуги оказывают
+							p 					ООО МКК "МультиГлобал" 
+								br
+								| 					ОГРН: 5177746069584 
+							p 					ООО  "Ломбард АвтокапиталЪ" 
+								br
+								| 					ОГРН: 1137746165281
+						.item.col-lg-4
+							h3 Документы
+							a(href='#') Правила предоставления займов
+							br
+							a(href='#') Реквизиты ООО МКК «МультиГлобал»
+							br
+							a(href='#') Свидетельство СРО
+							br
+							a(href='#') Свидетельство ЦБ РФ
+							br
+							a(href='#') Политика конфеденциальности
+						.item.col-lg-4.pre-footer-contact.is-lg-visible
+							div
+								a.phone(href='#') + 7 (495) 126-19-75
+								button Позвонить
+			footer.footer.order-mob-15
+				.wrap
+					.logo
+						a(href='/')
+							img(src='img/logo.svg')
+					.flex
+						.contacts
+							.item
+								div
+									img(src='img/contacts1.svg')
+								div
+									| Москва, ул. Антонова-Овсеенко, 
+									br
+									| д.15, стр.3
+							.item
+								div
+									img(src='img/contacts2.svg')
+								div
+									a(href='#') +7 (495) 241-17-26
+									a(href='#') info@autocash.ru
+						ul
+							li
+								a(href='#') Займ под ПТС
+							li
+								a(href='#') Автозалог
+							li
+								a(href='#') Займ для бизнеса
+							li
+								a(href='#') Перезалог ПТС
+							li
+								a(href='#') Продажа
+							li
+								a(href='#') Документы
+						ul
+							li
+								a(href='#') Документы
+							li
+								a(href='#') Калькулятор
+							li
+								a(href='#') О компании
+							li
+								a(href='#') Контакты
+						.social
+							p
+								| Отвечаем в 
+								br
+								| мессенджерах
+							a(href='#')
+								img(src='img/social3.svg')
+							a(href='#')
+								img(src='img/social4.svg')
+			.hot-line-block.order-mob-16
+				.wrap.flex
+					.user
+						div
+							img(src='img/avatar.png')
+						div
+							a.phone(href='#') 8 (945) 156-78-98
+							span
+								i горячая линия
+					.text
+						| АвтокапиталЪ — удобный сервис по получению займов под залог транспортных средств. 
+						br
+						| 				Более 10 лет мы помогаем нашим заемщикам решить их финансовые вопросы
+			.bottom-data-block.order-mob-17
+				.wrap
+					.row
+						.item.col-lg-4
+							h3 Условия выдачи
+							p
+								| Сумма займа: от 50 000 рублей до 3 000 000 рублей, до 90% от стоимости автомобиля.
+							p Период погашения долга: 12–36 месяцев.
+							p
+								| Платежи: Заём погашается ежемесячными равными платежами, которые состоят из оплаты основного долга и процентов. Пеня при просрочке начисляется из расчёта 20% на сумму просроченной задолженности.
+							p
+								a.phone-item(href='#') +7 (495) 241-17-26
+						.item.col-lg-4
+							h3 Досрочное погашение
+							p
+								| Возможно без штрафов в любой день; проценты оплачиваются только за фактический срок пользования деньгами.
+							p
+								| Минимальная процентная ставка: 30% годовых или 2,5% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+							p
+								| Максимальная процентная ставка: 88% годовых или 6% в месяц, дополнительная комиссия и платежи за выдачу отсутствуют.
+						.item.col-lg-4
+							h3 Пример рассчета
+							p Сумма займа: 100 000 ₽
+							p Период погашения долга: 12 месяцев.
+							p Проценты: 4,5% в месяц (42% годовых).
+							p Ежемесячный платёж: 11 833 ₽
+							p Итого к возврату: 142 000 ₽
+							p Банк партнёр: ПАО банк «ФК Открытие»
+							p Генеральная лицензия банка России № 2209 от 24.11.2014
