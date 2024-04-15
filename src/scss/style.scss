@@ -736,7 +736,7 @@ main {
   @media (min-width: $lg) {
     margin-bottom: 60px;
   }
-  &.service5, &.service1, &.service2, &.service3 {
+  &.service5, &.service1, &.service2, &.service3, &.calc-page {
     @media (max-width: $lg - 1px) {
       margin-bottom: 0;
     }
@@ -1282,6 +1282,7 @@ main {
 }
 .calc-block .result .agree .checkbox:checked + label:after {
   left: 19px;
+  background: #a6b5bf;
 }
 .link-plan {
   font-size: 18px;

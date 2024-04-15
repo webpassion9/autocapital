@@ -218,3 +218,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 	});
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	// --------------------------------------------------------------------------
+	// phone mask
+	// --------------------------------------------------------------------------
+
+	Inputmask({"mask": "+7 (999) 999-9999"}).mask(".input-phone");
+
+});

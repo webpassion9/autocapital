@@ -8,24 +8,6 @@ html
 		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
 		link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
 		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css')
-		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
-		script(type='text/javascript' src='js/slick.min.js')
-		script(src='js/app.min.js')
-		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
-		script.
-			$(function(){
-			$('#select').change(function(){
-			var colorSelection = $('#select').val();
-			$('.js-'+colorSelection+'-btn').trigger('click');
-			})
-			$('a').on('click',function(){
-			var sel = $(this).parent().parent('ul').data('sel'),
-			val = $(this).data('val');
-			for (i=0; i<=sel.length; i++) {
-			$(sel[i]).val(val[i]);
-			}
-			});
-			});
 	body
 		.wrapper
 			include includes/header
@@ -68,7 +50,7 @@ html
 			.wrap
 				form.form-request.form-request--mod-theme.is-lg-hidden
 					h3.heading-h3 Заявка на займ
-					input(type='text' placeholder='+7 (___) ___-__-__')
+					input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 					button Отправить
 			.pre-footer-block.order-mob-11
 				.wrap
@@ -190,3 +172,22 @@ html
 							p Итого к возврату: 142 000 ₽
 							p Банк партнёр: ПАО банк «ФК Открытие»
 							p Генеральная лицензия банка России № 2209 от 24.11.2014
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		script(type='text/javascript' src='js/slick.min.js')
+		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+		script(src='js/inputmask.min.js')
+		script(src='js/common.js')
+		script.
+			$(function(){
+				$('#select').change(function(){
+				var colorSelection = $('#select').val();
+				$('.js-'+colorSelection+'-btn').trigger('click');
+			})
+			$('a').on('click',function(){
+				var sel = $(this).parent().parent('ul').data('sel'),
+				val = $(this).data('val');
+				for (i=0; i<=sel.length; i++) {
+				$(sel[i]).val(val[i]);
+				}
+			});
+			});

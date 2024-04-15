@@ -9,67 +9,6 @@ html
 		link(rel='stylesheet' href='https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css')
 		link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css')
 		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css')
-		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
-		script(type='text/javascript' src='js/slick.min.js')
-		script(src='js/app.min.js')
-		script(src='https://code.jquery.com/ui/1.13.2/jquery-ui.js')
-		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
-		script(src='js/jquery.responsiveTabs.js')
-		script.
-			$( function() {
-			$( "#slider-range-max" ).slider({
-			range: "max",
-			min: 50000,
-			max: 10000000,
-			step: 5000,
-			value: 5000000,
-			slide: function( event, ui ) {
-			$( "#amount" ).val( ui.value + " ₽");
-			}
-			});
-			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
-			} );
-		script.
-			$( function() {
-			$( "#slider-range-max2" ).slider({
-			range: "max",
-			min: 1,
-			max: 36,
-			value: 18,
-			slide: function( event, ui ) {
-			$( "#amount2" ).val( ui.value + " мес.");
-			}
-			});
-			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " мес." );
-			} );
-		script.
-			$( function() {
-			$( "#slider-range-max4" ).slider({
-			range: "max",
-			min: 50000,
-			max: 10000000,
-			step: 5000,
-			value: 5000000,
-			slide: function( event, ui ) {
-			$( "#amount4" ).val( ui.value + " ₽");
-			}
-			});
-			$( "#amount4" ).val( $( "#slider-range-max4" ).slider( "value" ) + " ₽" );
-			} );
-		script.
-			$( function() {
-			$( "#slider-range-max5" ).slider({
-			range: "max",
-			min: 50000,
-			max: 10000000,
-			step: 5000,
-			value: 5000000,
-			slide: function( event, ui ) {
-			$( "#amount5" ).val( ui.value + " ₽");
-			}
-			});
-			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
-			} );
 	body
 		.wrapper
 			include includes/header
@@ -90,7 +29,7 @@ html
 									.pre-form.is-lg-hidden
 										span До 10 млн ₽ за 30 минут
 									form.index-first-block__form
-										input(type='text' placeholder='+7 (___) ___-__-__')
+										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Получить деньги
 									.bottom-text
 										| Нажимая на кнопку я соглашаюсь с 
@@ -207,7 +146,7 @@ html
 									img(src='img/logo2.svg')
 								form
 									p Получите одобрение прямо сейчас в Whatsapp
-									input(type='text' placeholder='+7 (___) ___-__-__')
+									input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 									button Получить деньги
 						.col-lg-7.offset-lg-1
 							.content
@@ -415,7 +354,7 @@ html
 				h3.heading-h3 Отправить заявку
 				.form-request__img
 					img(src="img/side-view-young-handsome-man-using-cell-phone-car.jpg", alt="")
-				input(type='text' placeholder='+7 (___) ___-__-__')
+				input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 				button Отправить
 				.bottom-text
 					| Нажимая на кнопку я соглашаюсь с 
@@ -727,7 +666,7 @@ html
 											div 50 000 P
 											div 10 000 000 P
 										input(type='text' placeholder='Ваше имя')
-										input(type='text' placeholder='+7 (___) ___-__-__')
+										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Отправить
 									.contacts
 										.links
@@ -757,7 +696,7 @@ html
 											input(type='text' placeholder='Модель автомобиля')
 											input(type='text' placeholder='Год выпуска')
 											input(type='text' placeholder='Ваше имя')
-											input(type='text' placeholder='+7 (___) ___-__-__')
+											input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Отправить
 									.contacts
 										.links
@@ -898,3 +837,66 @@ html
 							p Итого к возврату: 142 000 ₽
 							p Банк партнёр: ПАО банк «ФК Открытие»
 							p Генеральная лицензия банка России № 2209 от 24.11.2014
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		script(type='text/javascript' src='js/slick.min.js')
+		script(src='https://code.jquery.com/ui/1.13.2/jquery-ui.js')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+		script(src='https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js')
+		script(src='js/jquery.responsiveTabs.js')
+		script(src='js/inputmask.min.js')
+		script(src='js/common.js')
+		script.
+			$( function() {
+			$( "#slider-range-max" ).slider({
+				range: "max",
+				min: 50000,
+				max: 10000000,
+				step: 5000,
+				value: 5000000,
+				slide: function( event, ui ) {
+					$( "#amount" ).val( ui.value + " ₽");
+				}
+			});
+			$( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+				$( "#slider-range-max2" ).slider({
+				range: "max",
+				min: 1,
+				max: 36,
+				value: 18,
+				slide: function( event, ui ) {
+					$( "#amount2" ).val( ui.value + " мес.");
+				}
+			});
+			$( "#amount2" ).val( $( "#slider-range-max2" ).slider( "value" ) + " мес." );
+			} );
+		script.
+			$( function() {
+				$( "#slider-range-max4" ).slider({
+				range: "max",
+				min: 50000,
+				max: 10000000,
+				step: 5000,
+				value: 5000000,
+				slide: function( event, ui ) {
+					$( "#amount4" ).val( ui.value + " ₽");
+				}
+			});
+			$( "#amount4" ).val( $( "#slider-range-max4" ).slider( "value" ) + " ₽" );
+			} );
+		script.
+			$( function() {
+			$( "#slider-range-max5" ).slider({
+				range: "max",
+				min: 50000,
+				max: 10000000,
+				step: 5000,
+				value: 5000000,
+				slide: function( event, ui ) {
+					$( "#amount5" ).val( ui.value + " ₽");
+				}
+			});
+			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
+			} );

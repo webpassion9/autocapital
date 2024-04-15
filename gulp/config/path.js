@@ -16,7 +16,7 @@ export const path = {
         favicon: `${buildFolder}/`
     },
     src: {
-        js: `${srcFolder}/js/app.js`,
+        js: `${srcFolder}/js/**/*.js`,
         scssFolder: `${srcFolder}/scss/`,
         scss: `${srcFolder}/scss/style.scss`,
         scssAll: `${srcFolder}/scss/**/*.scss`,
