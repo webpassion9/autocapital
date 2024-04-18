@@ -19,8 +19,7 @@ html
 						.col-lg-5.top-text
 							p
 								| Финансовая группа Автокапиталъ входит в число ведущих компаний на рынке микрофинансирования в России
-							p
-								span На протяжении 10 лет
+							p На протяжении 10 лет
 								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
 						.top-counts.flex.col-lg-6.offset-lg-1
 							.item
@@ -33,28 +32,28 @@ html
 								span 1 500 000 000 ₽
 								| 						выданных займов
 					.photos
-						.item
+						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item
+						.item.order-mob-5
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
-						.item
+						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big
+						.item.big.order-mob-4
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
-						.item.big
+						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item
+						.item.order-mob-6
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item
+						.item.order-mob-7
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item
+						.item.order-mob-8
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -121,34 +120,36 @@ html
 					.top-text
 						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
 					.list.row
-						.col-lg-4
-							.item
-								img(src='img/program1.jpg')
+						.col-lg-4.order-mob-1
+							a(href="#").item
+								img(src='img/program1.jpg').is-lg-visible
+								img(src='img/program1_mob.png').is-lg-hidden
 								.text
 									| Займы под 
 									br
 									| авто
-						.col-lg-4
-							.item
+						.col-lg-4.order-mob-3
+							a(href="#").item
 								img(src='img/program2.jpg')
 								.text
 									| Займы для 
 									br
 									| бизнеса
-						.col-lg-4
-							.item
+						.col-lg-4.order-mob-2
+							a(href="#").item
 								img(src='img/program3.jpg')
 								.text
 									| Автоломбард
-						.col-lg-4
-							.item
-								img(src='img/program4.jpg')
+						.col-lg-4.order-mob-4
+							a(href="#").item
+								img(src='img/program4.jpg').is-lg-visible
+								img(src='img/program4_mob.png').is-lg-hidden
 								.text
 									| Рефинансирование 
 									br
 									| займов
 						.col-lg-4.is-lg-visible
-							.item
+							a(href="#").item
 								img(src='img/program5.jpg')
 								.text
 									p
@@ -177,7 +178,7 @@ html
 							img(src='img/partner7.png')
 						.col-6.col-lg-3.item
 							img(src='img/partner8.png')
-			.map-block.order-mob-11.is-lg-visible
+			.map-block.order-mob-10
 				.wrap
 					.row
 						.col-lg-5
@@ -213,6 +214,8 @@ html
 										.item
 											span.metro м. Бабушкинская
 											| 							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
+									.is-lg-hidden.map-section
+										img(src="img/map.jpg", alt="")
 									.contacts
 										.links
 											div
@@ -362,9 +365,9 @@ html
 								br
 								| мессенджерах
 							a(href='#')
-								img(src='img/social3.svg')
-							a(href='#')
 								img(src='img/social4.svg')
+							a(href='#')
+								img(src='img/social3.svg')
 			.hot-line-block.order-mob-13
 				.wrap.flex
 					.user

@@ -82,40 +82,42 @@ html
 						button Оформить
 						.is-lg-hidden
 							a(href="#").link-plan График платежей
-			.program-block.program-block--mod-bg-white
+			.program-block.program-block--mod-bg-white.program-block--mob-margin-top
 				.wrap
 					h2 Программы займов
 					.top-text
 						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
 					.list.row
-						.col-lg-4
-							.item
-								img(src='img/program1.jpg')
+						.col-lg-4.order-mob-1
+							a(href="#").item
+								img(src='img/program1.jpg').is-lg-visible
+								img(src='img/program1_mob.png').is-lg-hidden
 								.text
 									| Займы под 
 									br
 									| авто
-						.col-lg-4
-							.item
+						.col-lg-4.order-mob-3
+							a(href="#").item
 								img(src='img/program2.jpg')
 								.text
 									| Займы для 
 									br
 									| бизнеса
-						.col-lg-4
-							.item
+						.col-lg-4.order-mob-2
+							a(href="#").item
 								img(src='img/program3.jpg')
 								.text
 									| Автоломбард
-						.col-lg-4
-							.item
-								img(src='img/program4.jpg')
+						.col-lg-4.order-mob-4
+							a(href="#").item
+								img(src='img/program4.jpg').is-lg-visible
+								img(src='img/program4_mob.png').is-lg-hidden
 								.text
 									| Рефинансирование 
 									br
 									| займов
 						.col-lg-4.is-lg-visible
-							.item
+							a(href="#").item
 								img(src='img/program5.jpg')
 								.text
 									p
@@ -199,9 +201,9 @@ html
 								br
 								| мессенджерах
 							a(href='#')
-								img(src='img/social3.svg')
-							a(href='#')
 								img(src='img/social4.svg')
+							a(href='#')
+								img(src='img/social3.svg')
 			.hot-line-block.order-mob-13
 				.wrap.flex
 					.user

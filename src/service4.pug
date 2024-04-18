@@ -384,22 +384,24 @@ html
 						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
 					.list.row
 						.col-lg-4
-							.item
-								img(src='img/program1.jpg')
+							a(href="#").item
+								img(src='img/program1.jpg').is-lg-visible
+								img(src='img/program1_mob.png').is-lg-hidden
 								.text
 									| Займы под 
 									br
 									| авто
 						.col-lg-4
-							.item
+							a(href="#").item
 								img(src='img/program2.jpg')
 								.text
 									| Займы для 
 									br
 									| бизнеса
 						.col-lg-4
-							.item
-								img(src='img/program4.jpg')
+							a(href="#").item
+								img(src='img/program4.jpg').is-lg-visible
+								img(src='img/program4_mob.png').is-lg-hidden
 								.text
 									| Рефинансирование 
 									br
@@ -434,28 +436,28 @@ html
 								span 1 500 000 000 ₽
 								| 						выданных займов
 					.photos
-						.item
+						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item
+						.item.order-mob-5
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
-						.item
+						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big
+						.item.big.order-mob-4
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
-						.item.big
+						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item
+						.item.order-mob-6
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item
+						.item.order-mob-7
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item
+						.item.order-mob-8
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -797,9 +799,9 @@ html
 								br
 								| мессенджерах
 							a(href='#')
-								img(src='img/social3.svg')
-							a(href='#')
 								img(src='img/social4.svg')
+							a(href='#')
+								img(src='img/social3.svg')
 			.hot-line-block.order-mob-16
 				.wrap.flex
 					.user
