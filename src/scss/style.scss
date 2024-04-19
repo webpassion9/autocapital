@@ -722,8 +722,8 @@ main {
   background: #003964;
   font-weight: 500;
   font-size: 14px;
-  text-transform: uppercase;
   @media (min-width: $lg) {
+    text-transform: uppercase;
     font-size: 16px;
     height: 56px;
     width: 147px;
@@ -757,8 +757,19 @@ main {
 	padding: 40px 0 30px;
 	position: relative;
 	background: linear-gradient(180deg, rgba(188, 202, 224, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #EFF2F8;
-	@media (min-width: $lg) {
-		background: url('../img/index-first-block.jpg') center / cover;
+	@media (max-width: $lg - 1px) {
+    &:after {
+      content: "";
+      position: absolute;
+      right: 150px;
+      top: 190px;
+      width: 201px;
+      height: 175px;
+      background: url(../img/img-buildings.png) no-repeat;
+    }
+  }
+  @media (min-width: $lg) {
+    background: url('../img/index-first-block.jpg') center / cover;
 		padding: 60px 0;
 	}
 	@media (min-width: 1300px) {
@@ -782,11 +793,11 @@ main {
 	}
 	@media (max-width: $lg - 1px) {
 		position: relative;
-		right: auto;
+		right: 0;
 		width: 450px;
 		max-width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: -20px;
 	}
 }
 .index-first-block .banner .text {
@@ -927,6 +938,10 @@ main {
   padding: 0 15px;
   font-size: 16px;
   font-weight: 500;
+  color: #819DB2;
+  &::placeholder {
+    color: #819DB2; 
+  }
   @media (min-width: $md) {
     width: 48.5%;
   }
@@ -1180,11 +1195,12 @@ main {
   }
 }
 .calc-block .result .top {
-  background: #f5f9fc;
-  padding: 25px 25px;
+  background: #EFF2F8;
+  padding: 20px 25px;
   @media (min-width: $lg) {
     text-align: center;
     margin-bottom: 10px;
+    padding: 25px 25px;
   }
   @media (min-width: $xl) {
     padding: 25px 50px;
@@ -1211,6 +1227,11 @@ main {
 }
 .calc-block .result .top .top-item p span {
   font-size: 24px;
+  &.percent {
+    @media (min-width: $lg) {
+      font-size: 14px;
+    }
+  }
 }
 .calc-block .result .top .line {
   width: 1px;
@@ -1308,7 +1329,7 @@ main {
   @media (max-width: $lg - 1px) {
     margin-left: -20px;
     margin-right: -20px;
-    background: #f5f9fc;
+    background: #EFF2F8;
     padding-bottom: 30px;
   }
 }
@@ -1373,6 +1394,10 @@ main {
     background: #EFF2F8;
     &--mod-bg-white {
       background: #fff;
+    }
+    &--mod-offsets {
+      padding-top: 30px;
+      padding-bottom: 40px;
     }
   }
   @media (min-width: $lg) {
@@ -1774,7 +1799,8 @@ main {
   padding: 6px 18px;
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   line-height: 15px;
   transform: skew(-8deg);
   vertical-align: middle;
@@ -2208,6 +2234,45 @@ main {
 .about-block .docs .list .slick-next:hover {
   background: #df2222 url('../img/next2h.svg') no-repeat center;
 }
+
+.adress-switch {
+  color: #819db2;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: #F2F5FA;
+  padding: 15px 30px 15px 15px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-top: 6px solid #819DB2;
+  }
+  &__heading {
+    display: block;
+    color: #003964;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+}
+.metro-items {
+  @media (max-width: $lg - 1px) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+    &.expanded {
+      max-height: 9999px;
+    }
+  }
+}
+
 .map-block {
   overflow: hidden;
   padding-bottom: 35px;
@@ -2340,9 +2405,10 @@ main {
   margin-bottom: 20px;
 }
 .map-block .list .items {
-  margin-bottom: 37px;
+  margin-bottom: 27px;
   @media (min-width: $lg) {
     border: 1px solid #cbd8e0;
+    margin-bottom: 37px;
   }
 }
 .map-block .list .items .item {
@@ -2520,10 +2586,12 @@ main {
   color: #819db2;
   font-size: 18px;
   line-height: 140%;
+
   @media (max-width: $lg - 1px) {
     width: 100%;
     display: flex;
     gap: 25px;
+    font-weight: 500;
   }
   @media (min-width: $lg) {
     text-align: right;
@@ -2671,7 +2739,7 @@ main {
 .pre-footer-block .line {
   margin-bottom: 35px;
   height: 1px;
-  background: rgba(203, 216, 224, 0.6);
+  background: #CBD8E0;
   @media (min-width: $lg) {
     margin-bottom: 80px;
   }
@@ -2824,12 +2892,17 @@ main {
     width: 312px;
   }
 }
+.footer-menu {
+  @media (max-width: $lg - 1px) {
+    width: 50%;
+  }
+}
 .footer .social p {
   font-size: 16px;
   font-weight: 700;
   line-height: 120%;
   @media (max-width: $lg - 1px) {
-    margin-right: 50px;
+    width: 50%;
   }
   @media (min-width: $lg) {
     font-size: 20px;
@@ -2904,6 +2977,9 @@ main {
   padding: 30px 0 20px;
   background: #346184;
   color: #cbd8e0;
+  @media (max-width: $lg - 1px) {
+    color: rgba(#cbd8e0, .4);
+  }
   @media (min-width: $lg) {
     padding: 40px 0 24px;
   }
@@ -2934,6 +3010,9 @@ main {
   text-decoration: none;
   font-weight: 700;
   color: #cbd8e0;
+  @media (max-width: $lg - 1px) {
+    color: rgba(#cbd8e0, .4);
+  }
 }
 .error-page {
   margin-bottom: 40px;
@@ -5384,6 +5463,11 @@ main {
 }
 .view-block {
   margin-bottom: 30px;
+  @media (max-width: $lg - 1px) {
+    &.mob-mb0 {
+      margin-bottom: 0;
+    }
+  }
   @media (min-width: $lg) {
     margin-bottom: 80px;
   }
@@ -5396,7 +5480,9 @@ main {
 .view-block .content {
   position: relative;
   color: #fff;
-  background: radial-gradient(100% 496.9% at 100% 0%, rgba(0, 73, 129, 0.76) 0%, #003964 70.24%);
+
+background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0.76) 0%, #003964 86.69%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
   padding: 40px 35px;
   @media (min-width: $lg) {
     padding: 40px 80px 50px;
@@ -5433,8 +5519,9 @@ main {
   border-radius: 4px;
   font-size: 18px;
   font-weight: 700;
+  color: #DF2222;
   @media (max-width: $lg - 1px) {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }
 .view-block .content .image {
@@ -6892,6 +6979,27 @@ main {
   a {
     color: rgba(#819db2,.7);
 
+  }
+}
+
+.info-section {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  &__img {
+    height: 240px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__btn {
+    text-align: center;
+    .btn {
+      max-width: 300px;
+    }
   }
 }
 

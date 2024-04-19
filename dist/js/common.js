@@ -227,3 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	Inputmask({"mask": "+7 (999) 999-9999"}).mask(".input-phone");
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const adressSwitch = document.querySelector('.adress-switch');
+    const metroItems = document.querySelector('.metro-items');
+
+    adressSwitch.addEventListener('click', function () {
+        metroItems.classList.toggle('expanded');
+    });
+});

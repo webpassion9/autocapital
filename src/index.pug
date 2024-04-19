@@ -18,21 +18,23 @@ html
 							.wrap
 								.text
 									.text__inner
-										h2 Займы под залог 
+										h2.is-lg-hidden Деньги под залог авто и спецтехники
+										h2.is-lg-visible Займы под залог 
 											span авто
 											|  и спецтехники
 										p
 											| Честно. Надёжно. Онлайн. 
 											span
 												i В реестре ЦБ РФ
-										img.image(src='img/index-first-block.png')
+										img.image(src='img/index-first-block.png').is-lg-visible
+										img.image(src='img/index-first-block_mob.png').is-lg-hidden
 										.pre-form.is-lg-visible
 											span Введите свой номер и получите до 5 млн ₽ за 30 минут
 										.pre-form.is-lg-hidden
 											span До 10 млн ₽ за 30 минут
 										form.index-first-block__form
 											input(type='text' placeholder='+7 (___) ___-__-__').input-phone
-											button Получить деньги
+											button Оформить
 										.bottom-text
 											| Нажимая на кнопку я соглашаюсь с 
 											a(href="#") политикой конфиденциальности
@@ -69,7 +71,7 @@ html
 										p
 											| от 
 											span 2
-											|  %
+											span.percent  %
 										| 							Ставка в месяц
 								.agree
 									input#agree.checkbox(type='checkbox')
@@ -79,7 +81,8 @@ html
 									.link.is-lg-visible
 										a(href='#') График платежей
 						.bottom-button
-							button Оформить
+							button.is-lg-visible Оформить
+							button.is-lg-hidden Получить деньгиprogra
 							.is-lg-hidden
 								a(href="#").link-plan График платежей
 			.technic-block.technic-block--bg-white.order-mob-3.is-lg-hidden
@@ -157,7 +160,7 @@ html
 									img(src='img/target16.svg')
 								div
 									span Под залог любой техники
-			.view-block.order-mob-6.is-lg-hidden
+			.view-block.order-mob-6.is-lg-hidden.mob-mb0
 				.wrap
 					.content
 						h2 Выездной осмотр
@@ -165,7 +168,7 @@ html
 						.image
 							img(src='img/view-block.png')
 						button Заказать выезд
-			.program-block.order-mob-7.program-block--mod-bg-white
+			.program-block.order-mob-7.program-block--mod-offsets
 				.wrap
 					h2 Программы займов
 					.top-text
@@ -209,6 +212,14 @@ html
 									| 						Минимальный 
 									br
 									| платеж
+			.info-section.order-mob-8.is-lg-hidden
+				.wrap
+					h2.heading-h2 Займы для малого бизнеса
+					p Оформите займ, не выходя из офиса
+					.info-section__img
+						img(src="img/employee.jpg", alt="")
+					.info-section__btn
+						a(href="#").btn.btn-base Заказать выезд
 			.steps-block.order-mob-4
 				.wrap
 					h2 Как оформить?
@@ -266,7 +277,7 @@ html
 							| Нам доверяют 
 							span
 								i В реестре ЦБ РФ
-						button.top-button Оставить отзыв
+						button.top-button.is-lg-visible Оставить отзыв
 					.row
 						.list.col-lg-4
 							.item
@@ -479,7 +490,10 @@ html
 										a(href='#tab3') Заказать выезд
 								#tab1
 									h2.is-lg-visible Работаем без выходных
-									.items
+									.adress-switch
+										.adress-switch__heading м. Выставочная (основной офис)
+										| г. Москва, ул. Антонова-Овсенко, д.15, стр.3
+									.items.metro-items
 										.item
 											span.metro м. Выставочная (основной офис)
 											| 							г. Москва, ул. Антонова-Овсенко, д.15, стр.3
@@ -657,7 +671,7 @@ html
 								div
 									a(href='#') +7 (495) 241-17-26
 									a(href='#') info@autocash.ru
-						ul
+						ul.footer-menu
 							li
 								a(href='#') Займ под ПТС
 							li
@@ -670,7 +684,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul
+						ul.footer-menu
 							li
 								a(href='#') Документы
 							li
