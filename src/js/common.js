@@ -1,28 +1,66 @@
-// import * as flsFunctions from "./modules/functions.js";
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css/bundle';
+// Viewport set
 
-// flsFunctions.isWebp();
+'use strict';
 
-// --------------------------------------------------------------------------
-// correct ratio
-// --------------------------------------------------------------------------
-// function forcedOriginalScale(containerClass) {
-//   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  
-//   if (!isMobile) {
-//     var App = document.querySelector(containerClass);
-//     App.style.zoom = 1 / devicePixelRatio;
-//   }
-// }
+document.addEventListener('DOMContentLoaded', ready);
 
-// document.addEventListener(
-//   "DOMContentLoaded",
-//   function() {
-//     forcedOriginalScale('.wrapper');
-//   }
-// );
+function ready() {
+    (function(){
+        setViewport();
 
+        function setViewport() {
+            var winWidth = document.documentElement.clientWidth;
+            var viewportTag = document.querySelector('[name="viewport"]');
+            var changingPoint = 375;
+            var attrName = 'content';
+            var adptiveAttrVal = 'width=device-width, initial-scale=1';
+            var scaleAttrVal1 = 'initial-scale=0';
+            var scaleAttrVal2 = 'width=375';
+
+            //console.log(winWidth);
+
+            if (winWidth < changingPoint && viewportTag.getAttribute(attrName) !== scaleAttrVal2) {
+                viewportTag.setAttribute(attrName, scaleAttrVal1);
+                viewportTag.setAttribute(attrName, scaleAttrVal2);
+            } else if (winWidth >= changingPoint && viewportTag.getAttribute(attrName) !== adptiveAttrVal) {
+                viewportTag.setAttribute(attrName, adptiveAttrVal);
+            }
+        }
+
+        function throttle(func, ms) {
+
+            var isThrottled = false,
+                savedArgs,
+                savedThis;
+
+            function wrapper() {
+
+                if (isThrottled) { // (2)
+                    savedArgs = arguments;
+                    savedThis = this;
+                    return;
+                }
+
+                func.apply(this, arguments); // (1)
+
+                isThrottled = true;
+
+                setTimeout(function() {
+                    isThrottled = false; // (3)
+                    if (savedArgs) {
+                        wrapper.apply(savedThis, savedArgs);
+                        savedArgs = savedThis = null;
+                    }
+                }, ms);
+            }
+
+            return wrapper;
+        };
+    })();
+}
+
+
+// tabs
 
 $(function () {
 	var tabContainers = $('div.tabs > div');
