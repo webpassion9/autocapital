@@ -12,21 +12,21 @@ html
 	body
 		.wrapper
 			include includes/header
-			.index-first-block.service2
+			.index-first-block.service5
 				.wrap.big.wrap-first
 					.banner
 						.wrap
 							.text.big
 								.text__inner
-									.top-text
+									.top-text.order-mob-1
 										span Выгоднее чем в банке
-									h2
+									h2.order-mob-2
 										| Доходность — 
 										span 24%
 										|  годовых
-									p Инвестируй в обеспеченные займы!
-									img.image(src='img/index-first-block12.png')
-			.calc-block.bg
+									p.order-mob-4 Инвестируй в обеспеченные займы!
+									img.image(src='img/index-first-block12.png').order-mob-3
+			.calc-block.calc-block--service5.bg
 				.wrap
 					h2.is-lg-hidden Рассчитайте доход
 					.row
@@ -256,9 +256,10 @@ html
 												img(src='img/social4.svg')
 			.order-block
 				.wrap
-					h3.heading-h3 Заявка на договор
-					.top-text
+					h3.heading-h3.is-lg-visible Заявка на договор
+					.top-text.is-lg-visible
 						| инвестиционного займа
+					h3.heading-h3.is-lg-hidden Заявка на договор инвестиционного займа
 					.content.flex
 						.calc
 							div
@@ -291,6 +292,8 @@ html
 							input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 							input(type='text' placeholder='Название компании')
 							button Оформить заявку
+						.is-lg-hidden.form-bottom-link
+							a(href="#") Все процентные ставки
 			.about-block.order-mob-9
 				.wrap
 					h2 О компании
@@ -394,7 +397,7 @@ html
 								.safely__item-text Состоим в 
 									|
 									strong СРО “МиР”
-			.faq-block.inner2
+			.faq-block.inner2.order-mob-9
 				.wrap
 					.content
 						h3.heading-h3 Часто задаваемые вопросы

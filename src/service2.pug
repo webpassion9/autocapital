@@ -19,15 +19,17 @@ html
 							.text
 								.text__inner
 									h2 Займы под залог авто
+										span.is-lg-hidden.color-blue (ПТС)
 									p
 										| Честно. Надёжно. Онлайн. 
 										span
 											i В реестре ЦБ РФ
 									img.image(src='img/index-first-block6.png')
+									img(src="img/img-buildings.png", alt="").is-lg-hidden.img-bg-buildings
 									.pre-form.is-lg-visible
 										span Введите свой номер и получите до 5 млн ₽ за 30 минут
 									.pre-form.is-lg-hidden
-										span До 10 млн ₽ за 30 минут
+										span До 5 млн ₽ за 30 минут
 									form.index-first-block__form
 										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Получить деньги
@@ -245,6 +247,15 @@ html
 											li Экономим ваше время
 											li Не нужно приезжать в офис
 										button.advantages-btn Заказать выезд
+			.pledge-block.order-mob-8.is-lg-hidden
+				.wrap
+					.pledge-block__top
+						.heading-h3 Принимаем в залог
+						p даже грузовики и спецтехнику
+					.pledge-block__img
+						img(src="img/index-first-block4.png", alt="").pledge-block__img-main
+						img(src="img/img-buildings2.png", alt="").pledge-block__img-bg
+					a(href="#").btn.btn-base Оформить заём
 			.last-credits-block.order-mob-6.last-credits-block--margin-mob
 				.wrap
 					.last-credits-row.row
@@ -281,7 +292,7 @@ html
 									img(src='img/last-credit.jpg')
 								.item
 									img(src='img/last-credit.jpg')
-			.conditions-block.order-mob-8
+			.conditions-block.conditions-block--mod-mob.order-mob-8
 				.wrap
 					h2.heading-h2 Условия
 					#tabs.tabs
@@ -504,7 +515,7 @@ html
 									| Рефинансирование 
 									br
 									| займов
-			.about-block.order-mob-11
+			.about-block.order-mob-11.about-block--mob-margin-none
 				.wrap
 					h2 О компании
 					.row
@@ -607,6 +618,22 @@ html
 								.safely__item-text Состоим в 
 									|
 									strong СРО “МиР”
+			.docs-block.is-lg-hidden.order-mob-11
+				.wrap
+					.heading-h3 Работаем в рамках закона
+					ul.docs-list
+						li.docs-list__item
+							.docs-list__item-icon
+								img(src="img/icon-doc.svg", alt="")
+							.docs-list__item-main
+								.docs-list__item-label В соответствии с № 353-ФЗ
+								.docs-list__item-name «О потребительском кредите (займе)»
+						li.docs-list__item
+							.docs-list__item-icon
+								img(src="img/icon-doc.svg", alt="")
+							.docs-list__item-main
+								.docs-list__item-label В соответствии с № 151-ФЗ
+								.docs-list__item-name «О микрофинансовой деятельности»
 			.map-block.order-mob-12
 				.wrap
 					.row

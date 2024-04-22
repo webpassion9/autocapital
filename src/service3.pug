@@ -20,14 +20,15 @@ html
 								.text__inner
 									h2 Рефинансирование автозаймов
 									p
-										| Честно. Надёжно. Онлайн. 
+										span.is-lg-visible Честно. Надёжно. Онлайн. 
 										span
 											i В реестре ЦБ РФ
-									img.image(src='img/index-first-block8.png')
+									img.image(src='img/index-first-block8.png').is-lg-visible
+									img.image(src='img/index-first-block8_mob.png').is-lg-hidden
 									.pre-form.is-lg-visible
 										span Введите свой номер и получите до 5 млн ₽ за 30 минут
 									.pre-form.is-lg-hidden
-										span До 10 млн ₽ за 30 минут
+										span В день обращения
 									form.index-first-block__form
 										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Получить деньги
@@ -86,12 +87,14 @@ html
 								.link.is-lg-visible
 									a(href='#') График платежей
 					.bottom-button
-						button Оформить
+						button.is-lg-visible Оформить
+						button.is-lg-hidden Оставить заявку
 						.is-lg-hidden
 							a(href="#").link-plan График платежей
 			.targets-block.order-mob-2
 				.list
 					.wrap
+						h2.is-lg-hidden Зачем рефинансировать
 						.row
 							.item.col-lg-4
 								div
@@ -614,6 +617,15 @@ html
 								.item(style='top: 55%; left: 54%;')
 								.item(style='top: 35%; left: 74%;')
 								button Проложить маршрут
+			.form-request.order-mob-10.is-lg-hidden.wrap
+				h3.heading-h3 Отправить заявку
+				.form-request__img
+					img(src="img/side-view-young-handsome-man-using-cell-phone-car.jpg", alt="")
+				input(type='text' placeholder='+7 (___) ___-__-__').input-phone
+				button Отправить
+				.bottom-text
+					| Нажимая на кнопку я соглашаюсь с 
+					a(href="#") политикой конфиденциальности
 			.pre-footer-block.order-mob-11
 				.wrap
 					.line
