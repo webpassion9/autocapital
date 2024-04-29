@@ -707,11 +707,14 @@ main {
 .header .contacts .phone a {
   display: block;
   text-decoration: none;
-  font-size: 20px;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 1;
   @media (min-width: $lg) {
     margin-bottom: 2px;
+    font-size: 20px;
+  }
+  @media (max-width: $lg - 1px) {
+    font-size: 18px;
   }
 }
 .enter-btn {
@@ -802,7 +805,21 @@ main {
 .index-first-block {
   &.service1, &.service2, &.service5 {
     .banner .image {
-      max-width: 450px;
+      @media (max-width: $lg - 1px) {
+        max-width: 450px;
+      }
+    }
+  }
+  &.index {
+    .banner .image {
+      @media (max-width: $lg - 1px) {
+        margin-top: -30px;
+        margin-bottom: -5px;
+        max-width: 100%;
+      }
+    }
+    .img-bg-buildings {
+      top: 150px;
     }
   }
   &.service2 {
@@ -814,8 +831,13 @@ main {
   &.service3 {
     background-color: #F2F5FA;
     .banner .image {
-      margin-right: 0;
       margin-bottom: 10px;
+      @media (min-width: $lg) {
+        margin-right: 0;
+      }
+      @media (max-width: $lg - 1px) {
+        margin-right: auto;
+      }
     }
     .banner {
       @media (max-width: $lg - 1px) {
@@ -834,6 +856,9 @@ main {
   &.service5 {
     .banner {
       @media (max-width: $lg - 1px) {
+        background-image: url('../img/img-buildings2.png');
+        background-repeat: no-repeat;
+        background-position: center 150px;
         .image {
           margin-bottom: 20px;
         }
@@ -918,7 +943,6 @@ main {
 }
 .index-first-block .banner .text p {
   position: relative;
-  padding-bottom: 20px;
   margin-bottom: 22px;
   color: #346184;
   line-height: 120%;
@@ -928,9 +952,11 @@ main {
 	font-size: 20px;
 	@media (min-width: $lg) {
 		font-size: 24px;
+    padding-bottom: 20px;
 	}
 	@media (max-width: $lg - 1px) {
 		margin-bottom: 0;
+    padding-bottom: 10px;
 	}
 }
 .index-first-block .banner .text p:after {
@@ -1061,6 +1087,13 @@ main {
         margin-right: -20px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 30px;
+        .item {
+          text-align: center;
+        }
+        .label {
+          color: #819DB2;
+        }
       }
       &.calc-block .item .selects .item .select {
         border: 1px solid #CBD8E0;
@@ -1083,6 +1116,11 @@ main {
       }
     }
   }
+  &--service3 {
+    @media (max-width: $lg - 1px) {
+      border-top: 1px solid #CBD8E0;
+    }
+  }
 }
 .calc-block .item {
   margin-bottom: 10px;
@@ -1098,7 +1136,12 @@ main {
 }
 .calc-block .item .field {
   position: relative;
-  margin-bottom: 10px;
+  @media (min-width: $lg) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: $lg - 1px) {
+    margin-bottom: 15px;
+  }
 }
 .calc-block .item .field p {
   position: absolute;
@@ -1146,11 +1189,17 @@ main {
   margin: -11px 0 0 -15px;
 }
 .calc-block .item .values {
-  padding-top: 20px;
-  color: #819db2;
   font-size: 12px;
   font-weight: 700;
   line-height: 140%;
+  @media (min-width: $lg) {
+    color: #819db2;
+    padding-top: 20px;
+  }
+  @media (max-width: $lg - 1px) {
+    color: #CBD8E0;
+    padding-top: 15px;
+  }
 }
 .calc-block .item .br {
   height: 30px;
@@ -1271,7 +1320,10 @@ main {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
+  @media (min-width: $lg) {
+    margin: 0 0 20px;
+  }
 }
 .calc-block .result2 .button a {
   display: inline-block;
@@ -1748,6 +1800,9 @@ main {
   @media (min-width: $lg) {
     font-size: 32px;
   }
+  @media (max-width: $lg - 1px) {
+    margin-bottom: 10px;
+  }
 }
 .steps-block .content .list .item p {
   margin-bottom: 30px;
@@ -2031,6 +2086,16 @@ main {
       margin-bottom: 0;
     }
   }
+  &--service5 {
+    background: #F5F9FC;
+  }
+}
+.hr-line {
+  height: 1px;
+  background: #CBD8E0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 .about-block.inner {
   background: none;
@@ -2110,7 +2175,6 @@ main {
   }
 }
 .about-block .photos {
-  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -8px;
@@ -2119,6 +2183,9 @@ main {
     margin-left: -15px;
     margin-right: -15px;
   }
+  @media (min-width: $lg) {
+    padding-bottom: 20px;
+  }
 }
 .about-block .photos .item {
   font-size: 0;
@@ -2126,7 +2193,7 @@ main {
   padding-left: 8px;
   padding-right: 8px;
   margin-bottom: 16px;
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     width: 19.6%;
     padding-left: 15px;
     padding-right: 15px;
@@ -2291,14 +2358,15 @@ main {
 .about-block .docs .list .item {
   background: #fff;
   position: relative;
-  padding: 30px 27px;
   box-shadow: 0px 0 15px rgba(69, 97, 109, 0.1);
   margin: 0 5px;
   @media (min-width: $lg) {
     margin: 0 15px;
+    padding: 30px 27px;
   }
   @media (max-width: $lg - 1px) {
     width: 142px;
+    padding: 20px;
   }
 }
 .about-block .docs .list .item a:hover:after {
@@ -2335,15 +2403,21 @@ main {
   box-shadow: rgba(1, 1, 1, 0.1) 0 0 20px;
 }
 .about-block .docs .list .slick-prev {
-  left: -4px;
+  left: 5px;
   background: #ffffff url('../img/prev2.svg') no-repeat center;
+  @media (min-width: $lg) {
+    left: -4px;
+  }
 }
 .about-block .docs .list .slick-prev:hover {
   background: #df2222 url('../img/prev2h.svg') no-repeat center;
 }
 .about-block .docs .list .slick-next {
-  right: -4px;
+  right: 5px;
   background: #ffffff url('../img/next2.svg') no-repeat center;
+  @media (min-width: $lg) {
+    right: -4px;
+  }
 }
 .about-block .docs .list .slick-next:hover {
   background: #df2222 url('../img/next2h.svg') no-repeat center;
@@ -2671,12 +2745,17 @@ main {
   display: flex;
 }
 .map-block .list .contacts .links .social {
-  padding-left: 15px;
+  @media (min-width: $lg) {
+    padding-left: 15px;
+  }
+  @media (max-width: $lg - 1px) {
+    padding-left: 48px;
+  }
 }
 .map-block .list .contacts .links .social a {
   display: inline-block;
   width: 30px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .map-block .list .contacts .links a {
   display: block;
@@ -2778,8 +2857,14 @@ main {
     padding-bottom: 15px;
     .col-auto {
       min-height: 100%;
-      padding-left: 15px;
-      padding-right: 15px;
+      @media (min-width: $lg) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @media (max-width: $lg - 1px) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
     }
   }
 }
@@ -2841,7 +2926,18 @@ main {
 }
 .slider-articles {
   .col-auto {
-    width: 343px;
+    @media (min-width: $lg) {
+      width: 343px;
+    }
+    @media (max-width: $lg - 1px) {
+      width: 279px;
+    }
+  }
+  .item {
+    @media (max-width: $lg - 1px) {
+      box-shadow: none;
+      border: 1px solid #CBD8E0;
+    }
   }
 }
 .pre-footer-block {
@@ -2940,7 +3036,8 @@ main {
 }
 .footer .contacts {
   @media (max-width: $lg - 1px) {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    width: 100%;
   }
 }
 .footer .contacts .item:not(:last-child) {
@@ -3000,7 +3097,7 @@ main {
   @media (max-width: $lg - 1px) {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   @media (min-width: $lg) {
     width: 312px;
@@ -3008,7 +3105,10 @@ main {
 }
 .footer-menu {
   @media (max-width: $lg - 1px) {
-    width: 50%;
+    width: 55%;
+    &--col-sec {
+      width: 45%; 
+    }
   }
 }
 .footer .social p {
@@ -3016,7 +3116,7 @@ main {
   font-weight: 700;
   line-height: 120%;
   @media (max-width: $lg - 1px) {
-    width: 50%;
+    width: 55%;
   }
   @media (min-width: $lg) {
     font-size: 20px;
@@ -3030,9 +3130,6 @@ main {
     width: 40px;
     height: 40px;
   }
-}
-.footer .social a img {
-  height: 50px;
 }
 .hot-line-block {
   background: #003964;
@@ -3117,7 +3214,10 @@ main {
 }
 .bottom-data-block .item p {
   margin-bottom: 10px;
-  line-height: 140%;
+  line-height: 1.2;
+  @media (min-width: $lg) {
+    line-height: 140%;
+  }
 }
 .bottom-data-block .item p .phone-item {
   display: block;
@@ -3141,13 +3241,16 @@ main {
   }
 }
 .error-page .content {
-  background: #f5f9fc;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 40px 0;
+  background: #f5f9fc;
   @media (min-width: $lg) {
     padding: 120px 0 160px;
+  }
+  @media (max-width: $lg - 1px) {
+    background: linear-gradient(180deg, rgba(188, 202, 224, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #EFF2F8;
   }
 }
 .error-page .content .text {
@@ -3170,16 +3273,14 @@ main {
   line-height: 140%;
   max-width: 550px;
 }
-.error-page .content .text button {
-  color: #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  width: 176px;
-  height: 55px;
-  background: #df2222;
-  font-weight: 700;
-  font-size: 18px;
+.error-page .content .text .btn {
+  gap: 4px;
+  @media (min-width: $sm) {
+    width: 176px;
+  }
+  @media (max-width: $md - 1px) {
+    width: 100%;
+  }
 }
 .error-page .content .text .image {
   @media (min-width: $lg) {
@@ -3215,10 +3316,13 @@ main {
   padding-bottom: 20px;
 }
 .sitemap-page .content .item h3 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
   line-height: 120%;
+  @media (min-width: $lg) {
+    margin-bottom: 30px;
+  }
 }
 .sitemap-page .content .item ul li {
   margin-bottom: 10px;
@@ -3908,10 +4012,13 @@ main {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;
+  display: flex;
+  gap: 10px;
 }
 .payments-page .list .item .buttons button {
-  width: 48.5%;
+  width: calc(48.5% - 10px);
   height: 55px;
+  flex-grow: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4971,7 +5078,7 @@ main {
   margin-bottom: 40px;
 }
 .article-page .content {
-  background: #f5f9fc;
+  background: #F2F5FA;
   padding: 40px 0 ;
   @media (min-width: $lg) {
     padding: 80px 0 36px;
@@ -5172,6 +5279,8 @@ main {
   font-weight: 700;
   line-height: 140%;
   margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
   @media (min-width: $lg) {
     margin-bottom: 20px;
   }
@@ -5572,7 +5681,7 @@ main {
   }
   @media (max-width: $lg - 1px) {
     width: 46%;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .view-block {
@@ -5590,6 +5699,11 @@ main {
     padding-right: 0;
     max-width: 1350px;
   }
+  &__btn {
+    @media (max-width: $lg - 1px) {
+      text-align: center;
+    }
+  } 
 }
 .view-block .content {
   position: relative;
@@ -5653,9 +5767,9 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   align-items: center;
 }
 .last-credits-block {
-  background: #f5f9fc;
+  background: #F2F5FA;
   padding: 30px 0;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   @media (min-width: $lg) {
     padding: 50px 0;
     margin-bottom: 80px;
@@ -5667,6 +5781,11 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   &--margin-mob {
     @media (max-width: $lg - 1px) {
       margin-top: 30px;
+    }
+  }
+  &--service3 {
+    @media (max-width: $lg - 1px) {
+      margin-top: 40px;
     }
   }
 }
@@ -5812,16 +5931,24 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   @media (min-width: $lg) {
     padding-bottom: 50px;
   }
+  &--service2 {
+    @media (max-width: $lg - 1px) {
+      background: #F5F9FC;
+      padding-top: 25px;
+    }
+  }
+}
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 .advantages-block2 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: 700;
   line-height: 100%;
   font-size: 32px;
   letter-spacing: -0.03em;
   @media (min-width: $lg) {
     margin-bottom: 40px;
-  margin-bottom: 40px;
   }
 }
 .advantages-block2 .top-text {
@@ -6185,6 +6312,7 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
       font-size: 18px;
       line-height: 120%;
       position: relative;
+      transition: 0s;
       &:after {
         content: "";
         position: absolute;
@@ -6199,7 +6327,7 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   }
   &.r-tabs-state-active {
     a {
-      border-bottom: 0;
+      border-color: transparent;
       &:after {
         transform: translateY(-50%) rotate(180deg);
       }
@@ -6512,25 +6640,30 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   }
 }
 .not-ready-block .content h2 {
-  margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
   max-width: 445px;
   @media (min-width: $lg) {
+    margin-bottom: 30px;
     font-size: 60px;
   }
   @media (max-width: $lg - 1px) {
     max-width: 50%;
+    margin-bottom: 10px;
   }
 }
 .not-ready-block .content p {
-  line-height: 120%;
-  font-size: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @media (min-width: $lg) {
     font-size: 24px;
+    line-height: 120%;
     margin-bottom: 150px;
+  }
+  @media (max-width: $lg - 1px) {
+    max-width: 50%;
+    font-size: 12px;
+    line-height: 140%;
   }
 }
 .not-ready-block .content a {
@@ -6561,7 +6694,7 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 .invest-block .content {
   background: radial-gradient(510.04% 141.42% at 100% 0%, rgba(0, 73, 129, 0.76), #003964 70.239%);
   color: #fff;
-  padding: 30px 20px;
+  padding: 40px 20px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -6573,7 +6706,10 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 .invest-block .content h2 {
   font-size: 18px;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 120%;
+  @media (min-width: $lg) {
+    line-height: 140%;
+  }
   @media (max-width: $lg - 1px) {
     margin-bottom: 20px;
   }
@@ -6589,13 +6725,13 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 }
 .invest-block .content .item {
   margin-top: 5px;
+  display: flex;
+  align-items: center;
   @media (min-width: $lg) {
     width: 33%;
   }
 }
 .invest-block .content .item div {
-  display: table-cell;
-  vertical-align: middle;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
@@ -6604,9 +6740,17 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   }
 }
 .invest-block .content .item div img {
-  width: 60px;
-  max-width: 60px;
   margin-right: 20px;
+  flex-shrink: 0;
+  @media (min-width: $lg) {
+    width: 60px;
+    max-width: 60px;
+  }
+  @media (max-width: $lg - 1px) {
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+  }
 }
 .credit-info-block {
   padding-bottom: 34px;
@@ -6806,12 +6950,17 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
   
 }
 .order-block {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   @media (min-width: $lg) {
     margin-bottom: 105px; 
   }
   @media (max-width: $lg - 1px) {
-    padding-top: 30px;
+    padding-top: 40px;
+  }
+  .heading-h3 {
+    @media (max-width: $lg - 1px) {
+      margin-bottom: 25px;
+    }
   }
 }
 .order-block .wrap {
@@ -6837,7 +6986,7 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 }
 .order-block .content {
   background: #f5f9fc;
-  padding: 30px 20px 20px 20px;
+  padding: 30px 20px 30px 20px;
   @media (min-width: $lg) {
     padding: 45px 50px 55px 50px;
   }
@@ -6850,6 +6999,7 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 }
 .order-block .content .calc {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   @media (min-width: $lg) {
@@ -6858,7 +7008,12 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
 }
 .order-block .content .calc .field {
   position: relative;
-  margin-bottom: 10px;
+  @media (min-width: $lg) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: $lg - 1px) {
+    margin-bottom: 15px;
+  }
 }
 .order-block .content .calc .field p {
   position: absolute;
@@ -7052,8 +7207,8 @@ background: radial-gradient(101.33% 63.96% at 101.33% 50.14%, rgba(0, 73, 129, 0
       margin-bottom: 7px;
     }
     &-text {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: 16px;
+      line-height: 24px;
       letter-spacing: -0.01em;
       color: #003964;
       p {

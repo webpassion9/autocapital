@@ -12,7 +12,7 @@ html
 	body
 		.wrapper
 			include includes/header
-			.index-first-block.service1.order-mob-1
+			.index-first-block.index.service1.order-mob-1
 					.wrap.big.wrap-first
 						.banner
 							.wrap
@@ -168,34 +168,39 @@ html
 						p Оформите займ, не выходя из дома
 						.image
 							img(src='img/view-block.png')
-						button Заказать выезд
+						.view-block__btn
+							button Заказать выезд
 			.program-block.order-mob-7.program-block--mod-offsets
 				.wrap
 					h2 Программы займов
 					.top-text
 						| Работаем с физическими и юридическими лицами. Возможен кредит без залога и без сдачи авто. Машина остается у вас или стоит на стоянке.
 					.list.row
-						.col-lg-4
+						.col-lg-4.order-mob-1
 							a(href="#").item
 								img(src='img/program1.jpg').is-lg-visible
 								img(src='img/program1_mob.png').is-lg-hidden
 								.text
 									| Займы под 
-									br
+									br.is-lg-visible
 									| авто
-						.col-lg-4
+						.col-lg-4.order-mob-3
 							a(href="#").item
-								img(src='img/program2.jpg')
+								img(src='img/program2.jpg').is-lg-visible
+								img(src='img/program2_mob.png').is-lg-hidden
 								.text
-									| Займы для 
-									br
+									| Займы
+									br.is-lg-hidden
+									|  для 
+									br.is-lg-visible
 									| бизнеса
-						.col-lg-4
+						.col-lg-4.order-mob-2
 							a(href="#").item
-								img(src='img/program3.jpg')
+								img(src='img/program3.jpg').is-lg-visible
+								img(src='img/program3_mob.png').is-lg-hidden
 								.text
 									| Автоломбард
-						.col-lg-4
+						.col-lg-4.order-mob-4
 							a(href="#").item
 								img(src='img/program4.jpg').is-lg-visible
 								img(src='img/program4_mob.png').is-lg-hidden
@@ -203,7 +208,7 @@ html
 									| Рефинансирование 
 									br
 									| займов
-						.col-lg-4.is-lg-visible
+						.col-lg-4.is-lg-visible.order-mob-5
 							a(href="#").item
 								img(src='img/program5.jpg')
 								.text
@@ -389,25 +394,25 @@ html
 						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item.order-mob-5
+						.item.order-mob-5.is-lg-visible
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
 						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big.order-mob-4
+						.item.big.order-mob-4.is-lg-visible
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
 						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item.order-mob-6
+						.item.order-mob-6.is-lg-visible
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item.order-mob-7
+						.item.order-mob-7.is-lg-visible
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item.order-mob-8
+						.item.order-mob-8.is-lg-visible
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -685,7 +690,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul.footer-menu
+						ul.footer-menu.footer-menu--col-sec
 							li
 								a(href='#') Документы
 							li

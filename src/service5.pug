@@ -32,7 +32,7 @@ html
 					.row
 						.item.big.col-lg-6.calc-service5
 							.field
-								p сумма займа
+								p сумма инвестиций
 								input#amount(type='text' readonly='')
 							#slider-range-max
 							.values.flex
@@ -60,13 +60,13 @@ html
 								.flex
 									.item
 										span 12 500 ₽
-										| 							Доход в месяц
+										.label 							Доход в месяц
 									.item
 										span от 30%
-										| 							% ставка
+										.label 							% ставка
 									.item
 										span 575 500 ₽
-										| 							Доход за год
+										.label 							Доход за год
 								.button
 									button Оформить заявку
 									a(href='#') Все процентные ставки
@@ -294,7 +294,8 @@ html
 							button Оформить заявку
 						.is-lg-hidden.form-bottom-link
 							a(href="#") Все процентные ставки
-			.about-block.order-mob-9
+					hr.hr-line.is-lg-hidden
+			.about-block.about-block--service5.order-mob-9
 				.wrap
 					h2 О компании
 					.row
@@ -318,25 +319,25 @@ html
 						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item.order-mob-5
+						.item.order-mob-5.is-lg-visible
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
 						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big.order-mob-4
+						.item.big.order-mob-4.is-lg-visible
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
 						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item.order-mob-6
+						.item.order-mob-6.is-lg-visible
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item.order-mob-7
+						.item.order-mob-7.is-lg-visible
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item.order-mob-8
+						.item.order-mob-8.is-lg-visible
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -563,7 +564,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul.footer-menu
+						ul.footer-menu.footer-menu--col-sec
 							li
 								a(href='#') Документы
 							li

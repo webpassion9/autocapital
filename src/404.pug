@@ -21,7 +21,8 @@ html
 									img(src='img/404.png')
 								p
 									| Мы сожалеем, но страница на которую вы пытались перейти не существует. Пожалуйста вернитесь на предыдущую страницу или воспользуйтесь меню сайта
-								button На главную →
+								a(href="#").btn.btn-base На главную
+									span.is-lg-visible  →
 			.program-block.program-block--mod-bg-white
 				.wrap
 					h2 Программы займов
@@ -38,14 +39,16 @@ html
 									| авто
 						.col-lg-4.order-mob-3
 							a(href="#").item
-								img(src='img/program2.jpg')
+								img(src='img/program2.jpg').is-lg-visible
+								img(src='img/program2_mob.png').is-lg-hidden
 								.text
 									| Займы для 
 									br
 									| бизнеса
 						.col-lg-4.order-mob-2
 							a(href="#").item
-								img(src='img/program3.jpg')
+								img(src='img/program3.jpg').is-lg-visible
+								img(src='img/program3_mob.png').is-lg-hidden
 								.text
 									| Автоломбард
 						.col-lg-4.order-mob-4
@@ -126,7 +129,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul.footer-menu
+						ul.footer-menu.footer-menu--col-sec
 							li
 								a(href='#') Документы
 							li

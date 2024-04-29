@@ -31,11 +31,11 @@ html
 										span В день обращения
 									form.index-first-block__form
 										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
-										button Получить деньги
+										button Отправить заявку
 									.bottom-text
 										| Нажимая на кнопку я соглашаюсь с 
 										a(href="#") политикой конфиденциальности
-			.calc-block.order-mob-4
+			.calc-block.calc-block--service3.order-mob-4
 				.wrap
 					h2.is-lg-hidden Рассчитайте платёж
 					.row
@@ -243,15 +243,18 @@ html
 												img(src='img/social3.svg')
 											a(href='#')
 												img(src='img/social4.svg')
-			.last-credits-block.order-mob-6
+			.last-credits-block.last-credits-block--service3.order-mob-6
 				.wrap
 					.last-credits-row.row
 						.text.col-lg-6
-							h2 Недавно выданные займы
-							.info
+							h2.is-lg-visible Недавно выданные займы
+							h2.is-lg-hidden Рефинансированные займы
+							.info.is-lg-visible
 								p BMW 528 F10
 								p 2010 г.в., 93 000 км, 3 000 см3, автомат
 								p Оценка: 1 150 000 ₽
+							.info.is-lg-hidden
+								p BMW 528 F10, 2010 г, 93 000 км
 							.data
 								.item
 									span
@@ -295,14 +298,16 @@ html
 									| авто
 						.col-lg-4
 							a(href="#").item
-								img(src='img/program2.jpg')
+								img(src='img/program2.jpg').is-lg-visible
+								img(src='img/program2_mob.png').is-lg-hidden
 								.text
 									| Займы для 
 									br
 									| бизнеса
 						.col-lg-4
 							a(href="#").item
-								img(src='img/program3.jpg')
+								img(src='img/program3.jpg').is-lg-visible
+								img(src='img/program3_mob.png').is-lg-hidden
 								.text
 									| Автоломбард
 			.about-block.order-mob-9
@@ -329,25 +334,25 @@ html
 						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item.order-mob-5
+						.item.order-mob-5.is-lg-visible
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
 						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big.order-mob-4
+						.item.big.order-mob-4.is-lg-visible
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
 						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item.order-mob-6
+						.item.order-mob-6.is-lg-visible
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item.order-mob-7
+						.item.order-mob-7.is-lg-visible
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item.order-mob-8
+						.item.order-mob-8.is-lg-visible
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -408,7 +413,7 @@ html
 								.safely__item-text Состоим в 
 									|
 									strong СРО “МиР”
-			.reviews-block.order-mob-10
+			.reviews-block.order-mob-10.is-lg-visible
 				.wrap
 					.flex
 						h2
@@ -686,7 +691,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul.footer-menu
+						ul.footer-menu.footer-menu--col-sec
 							li
 								a(href='#') Документы
 							li

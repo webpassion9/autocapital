@@ -231,10 +231,12 @@ html
 					.last-credits-row.row
 						.text.col-lg-6
 							h2 Недавно выданные займы
-							.info
+							.info.is-lg-visible
 								p BMW 528 F10
 								p 2010 г.в., 93 000 км, 3 000 см3, автомат
 								p Оценка: 1 150 000 ₽
+							.info.is-lg-hidden
+								p BMW 528 F10, 2010 г, 93 000 км
 							.data
 								.item
 									span
@@ -272,7 +274,7 @@ html
 							.advantage-item__item-text Автомобили хранятся на крытой, отапливаемой стоянке. Территория охраняется и находится под видеонаблюдением.
 			.conditions-block.order-mob-9
 				.wrap
-					h2 Условия
+					h2.heading-h2 Условия
 					#tabs.tabs
 						ul
 							li
@@ -375,7 +377,8 @@ html
 				.wrap
 					.content
 						h2 Не готовы оставить авто?
-						p У нас есть решение
+						p.is-lg-visible У нас есть решение
+						p.is-lg-hidden Сможете продолжить использовать машину
 						a(href='#') Подробнее
 			.program-block.program-block--mod-bg-white.order-mob-10
 				.wrap
@@ -396,7 +399,8 @@ html
 										span Без визита в офис
 						.col-lg-4
 							a(href="#").item
-								img(src='img/program2.jpg')
+								img(src='img/program2.jpg').is-lg-visible
+								img(src='img/program2_mob.png').is-lg-hidden
 								.text
 									| Займы для 
 									br
@@ -442,25 +446,25 @@ html
 						.item.order-mob-1
 							a(href='img/about1.jpg' data-fancybox='gallery')
 								img(src='img/about1.jpg')
-						.item.order-mob-5
+						.item.order-mob-5.is-lg-visible
 							a(href='img/about2.jpg' data-fancybox='gallery')
 								img(src='img/about2.jpg')
 						.item.order-mob-2
 							a(href='img/about3.jpg' data-fancybox='gallery')
 								img(src='img/about3.jpg')
-						.item.big.order-mob-4
+						.item.big.order-mob-4.is-lg-visible
 							a(href='img/about4.jpg' data-fancybox='gallery')
 								img(src='img/about4.jpg')
 						.item.big.order-mob-3
 							a(href='img/about5.jpg' data-fancybox='gallery')
 								img(src='img/about5.jpg')
-						.item.order-mob-6
+						.item.order-mob-6.is-lg-visible
 							a(href='img/about6.jpg' data-fancybox='gallery')
 								img(src='img/about6.jpg')
-						.item.order-mob-7
+						.item.order-mob-7.is-lg-visible
 							a(href='img/about7.jpg' data-fancybox='gallery')
 								img(src='img/about7.jpg')
-						.item.order-mob-8
+						.item.order-mob-8.is-lg-visible
 							a(href='img/about8.jpg' data-fancybox='gallery')
 								img(src='img/about8.jpg')
 					.photos-link.is-lg-hidden
@@ -790,7 +794,7 @@ html
 								a(href='#') Продажа
 							li
 								a(href='#') Документы
-						ul.footer-menu
+						ul.footer-menu.footer-menu--col-sec
 							li
 								a(href='#') Документы
 							li
