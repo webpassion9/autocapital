@@ -63,7 +63,7 @@ function ready() {
 // tabs
 
 $(function () {
-	var tabContainers = $('div.tabs > .tab');
+	var tabContainers = $('div.tabs > div');
 	tabContainers.hide().filter(':first').show();		
 	$('div.tabs ul.tabNavigation a').click(function () {
 		tabContainers.hide();
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const adressSwitch = document.querySelector('.adress-switch.is-lg-hidden');
+    const adressSwitch = document.querySelector('.adress-switch');
     const metroItems = document.querySelector('.metro-items');
 
     adressSwitch.addEventListener('click', function () {
