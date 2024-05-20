@@ -489,7 +489,7 @@ main {
   display: block;
   text-decoration: none;
   padding: 14px 0;
-  color: #346184;
+  color: #003964;
   font-weight: 500;
   line-height: 140%;
 }
@@ -1020,7 +1020,6 @@ main {
 .index-first-block__form input[type='text'] {
   width: 100%;
   height: 54px;
-  border: 1px solid #cbd8e0;
   border-radius: 4px;
   padding: 0 15px;
   font-size: 16px;
@@ -1031,6 +1030,7 @@ main {
   }
   @media (min-width: $md) {
     width: 48.5%;
+    border: 1px solid #cbd8e0;
   }
 }
 .index-first-block__form button {
@@ -1431,6 +1431,9 @@ main {
   color: #346184;
   font-size: 12px;
   line-height: 14px;
+}
+.agree-text {
+  opacity: .6;
 }
 .calc-block .result .agree .checkbox + label:before {
   content: "";
@@ -2950,6 +2953,14 @@ main {
   margin-bottom: 35px;
   height: 1px;
   background: #CBD8E0;
+  &--mod {
+    background: none;
+  }
+  &--mod-mod {
+    @media (max-width: $lg - 1px) {
+      background: none;      
+    }
+  }
   @media (min-width: $lg) {
     margin-bottom: 80px;
   }
@@ -3067,12 +3078,15 @@ main {
   letter-spacing: -0.03em;
 }
 .footer .contacts .item div a:nth-child(2) {
-  color: #819db2;
   font-weight: 500;
   line-height: 140%;
   font-size: 14px;
+  @media (max-width: $lg - 1px) {
+    color: #003964;
+  }
   @media (min-width: $lg) {
     font-size: 18px;
+    color: #819db2;
   }
 }
 .footer .contacts .item div img {
