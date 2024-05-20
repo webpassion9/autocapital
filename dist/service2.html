@@ -235,7 +235,8 @@
 											<i>В реестре ЦБ РФ</i>
 										</span>
 									</p>
-									<img class="image" src="img/index-first-block6.png">
+									<img class="image is-lg-visible" src="img/index-first-block6.png">
+									<img class="image is-lg-hidden" src="img/index-first-block6_mob.png">
 									<img class="is-lg-hidden img-bg-buildings" src="img/img-buildings.png" alt="">
 									<div class="pre-form is-lg-visible">
 										<span>Введите свой номер и получите до 5 млн ₽ за 30 минут</span>
@@ -1085,27 +1086,25 @@
 						<div class="col-lg-5">
 							<div class="list tabs2">
 								<h3 class="is-lg-hidden">Где оформить</h3>
-								<div>
-									<select>
-										<option>Санкт-Петербург</option>
-										<option>Санкт-Петербург 2</option>
-										<option>Санкт-Петербург 3</option>
-									</select>
-								</div>
+								<select class="select-city is-lg-hidden">
+									<option>Санкт-Петербург</option>
+									<option>Санкт-Петербург 2</option>
+									<option>Санкт-Петербург 3</option>
+								</select>
 								<ul class="tabNavigation">
 									<li>
-										<a href="#tab1">Офисы</a>
+										<a href="#tab1.tab">Офисы</a>
 									</li>
 									<li>
-										<a href="#tab2">Онлайн-заявка</a>
+										<a href="#tab2.tab">Онлайн-заявка</a>
 									</li>
 									<li>
-										<a href="#tab3">Заказать выезд</a>
+										<a href="#tab3.tab">Заказать выезд</a>
 									</li>
 								</ul>
-								<div id="tab1">
+								<div class="tab tab" id="tab1">
 									<h2 class="is-lg-visible">Работаем без выходных</h2>
-									<div class="adress-switch">
+									<div class="adress-switch is-lg-hidden">
 										<div class="adress-switch__heading">м. Выставочная (основной офис)</div>г. Москва, ул. Антонова-Овсенко, д.15, стр.3
 									</div>
 									<div class="items metro-items">
@@ -1148,7 +1147,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="tab2">
+								<div class="tab tab" id="tab2">
 									<form>
 										<div class="field">
 											<p>сумма займа</p>
@@ -1183,7 +1182,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="tab3">
+								<div class="tab tab" id="tab3">
 									<form>
 										<div class="field">
 											<p>сумма займа</p>

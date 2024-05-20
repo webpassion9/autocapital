@@ -515,21 +515,20 @@ html
 						.col-lg-5
 							.list.tabs2
 								h3.is-lg-hidden Где оформить
-								div
-									select
-										option Санкт-Петербург
-										option Санкт-Петербург 2
-										option Санкт-Петербург 3
+								select.select-city.is-lg-hidden
+									option Санкт-Петербург
+									option Санкт-Петербург 2
+									option Санкт-Петербург 3
 								ul.tabNavigation
 									li
-										a(href='#tab1') Офисы
+										a(href='#tab1.tab') Офисы
 									li
-										a(href='#tab2') Онлайн-заявка
+										a(href='#tab2.tab') Онлайн-заявка
 									li
-										a(href='#tab3') Заказать выезд
-								#tab1
+										a(href='#tab3.tab') Заказать выезд
+								#tab1.tab
 									h2.is-lg-visible Работаем без выходных
-									.adress-switch
+									.adress-switch.is-lg-hidden
 										.adress-switch__heading м. Выставочная (основной офис)
 										| г. Москва, ул. Антонова-Овсенко, д.15, стр.3
 									.items.metro-items
@@ -563,7 +562,7 @@ html
 										.hours
 											span Без выходных
 											| 							с 9:00 до 21:00
-								#tab2
+								#tab2.tab
 									form
 										.field
 											p сумма займа
@@ -588,7 +587,7 @@ html
 										.hours
 											span Без выходных
 											| 							с 9:00 до 21:00
-								#tab3
+								#tab3.tab
 									form
 										.field
 											p сумма займа
