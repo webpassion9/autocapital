@@ -795,9 +795,9 @@
 								<i>В реестре ЦБ РФ</i>
 							</span>
 						</h2>
-						<button class="top-button">Оставить отзыв</button>
+						<button class="top-button is-lg-visible">Оставить отзыв</button>
 					</div>
-					<div class="row">
+					<div class="row reviews-row">
 						<div class="list col-lg-4">
 							<div class="item">
 								<div class="video">
@@ -889,7 +889,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="bottom-link">
+					<div class="bottom-link is-lg-visible">
 						<a href="#">Показать ещё</a>
 					</div>
 				</div>
@@ -1316,6 +1316,31 @@
 			});
 			$( "#amount6" ).val( $( "#slider-range-max6" ).slider( "value" ) + " ₽" );
 			} );
+		</script>
+		<script>
+			$(document).ready(function() {
+				function slickReviews() {
+						if ($(window).width() <= 992 && !$('.reviews-row').hasClass('slick-initialized')) {
+								// Перемещаем все .item в общий контейнер .reviews-row
+								$('.reviews-row .list .item').appendTo('.reviews-row');
+								$('.reviews-row .list').remove();
+								$('.reviews-row').slick({
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										infinite: true,
+										adaptiveHeight: true
+								});
+						} else if ($(window).width() > 992 && $('.reviews-row').hasClass('slick-initialized')) {
+								$('.reviews-row').slick('unslick');
+						}
+				}
+			
+				slickReviews();
+			
+				$(window).resize(function() {
+						slickReviews();
+				});
+			});
 		</script>
 	</body>
 </html>

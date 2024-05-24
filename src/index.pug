@@ -287,7 +287,7 @@ html
 							span
 								i В реестре ЦБ РФ
 						button.top-button.is-lg-visible Оставить отзыв
-					.row
+					.row.reviews-row
 						.list.col-lg-4
 							.item
 								.video
@@ -371,7 +371,7 @@ html
 										a(href='#') Яндекс
 									.date
 										| 12 декабря 2019
-					.bottom-link
+					.bottom-link.is-lg-visible
 						a(href='#') Показать ещё
 			.about-block.order-mob-9
 				.wrap
@@ -816,3 +816,27 @@ html
 			});
 			$( "#amount5" ).val( $( "#slider-range-max5" ).slider( "value" ) + " ₽" );
 			} );
+		script.
+			$(document).ready(function() {
+				function slickReviews() {
+						if ($(window).width() <= 992 && !$('.reviews-row').hasClass('slick-initialized')) {
+								// Перемещаем все .item в общий контейнер .reviews-row
+								$('.reviews-row .list .item').appendTo('.reviews-row');
+								$('.reviews-row .list').remove();
+								$('.reviews-row').slick({
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										infinite: true,
+										adaptiveHeight: true
+								});
+						} else if ($(window).width() > 992 && $('.reviews-row').hasClass('slick-initialized')) {
+								$('.reviews-row').slick('unslick');
+						}
+				}
+
+				slickReviews();
+
+				$(window).resize(function() {
+						slickReviews();
+				});
+			});
