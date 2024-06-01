@@ -20,6 +20,7 @@ html
 								.text__inner
 									h2 
 										| Калькулятор 
+										br.is-lg-hidden
 										span займа
 									p
 										| Честно. Надёжно. Онлайн. 
@@ -29,7 +30,7 @@ html
 									.pre-form.is-lg-visible
 										span Введите свой номер и получите до 5 млн ₽ за 30 минут
 									.pre-form.is-lg-hidden
-										span До 10 млн ₽ за 30 минут
+										span Получите до 10 млн ₽, за 30 минут
 									form.index-first-block__form
 										input(type='text' placeholder='+7 (___) ___-__-__').input-phone
 										button Получить деньги
@@ -46,8 +47,8 @@ html
 								input#amount(type='text' readonly='')
 							#slider-range-max
 							.values.flex
-								div 50 000 P
-								div 10 000 000 P
+								div 50 000 ₽
+								div 10 000 000 ₽
 						.item.col-lg-4
 							.field
 								p срок займа
@@ -63,19 +64,19 @@ html
 										| от 
 										span 27 000
 										|  ₽
-									| 							Ежемесячный платеж
+									div.sub-label 							Ежемесячный платеж
 								.line
 								.top-item
 									p
 											| от 
 											span 2
 											span.percent  %
-									| 							Ставка в месяц
+									div.sub-label 							Ставка в месяц
 							.agree
 								input#agree.checkbox(type='checkbox')
 								label(for='agree')
 									span Минимальный платёж
-									| 							Первые 3 месяца оплачивайте только проценты
+									.agree-text Первые 3 месяца оплачивайте только проценты
 								.link.is-lg-visible
 									a(href='#') График платежей
 					.bottom-button
@@ -140,7 +141,7 @@ html
 							p 					ООО  "Ломбард АвтокапиталЪ" 
 								br
 								| 					ОГРН: 1137746165281
-						.item.col-lg-4
+						.item.item--docs.col-lg-4
 							h3 Документы
 							a(href='#') Правила предоставления займов
 							br

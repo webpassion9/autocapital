@@ -212,7 +212,8 @@
 							</a>
 						</div>
 						<div class="phone">
-							<a href="#">+7 495 156-78-98</a>
+							<a class="is-lg-visible" href="#">+7 495 156-78-98</a>
+							<a class="is-lg-hidden" href="#">+7 (495) 156-78-98</a>
 							<span class="is-lg-visible">					Без выходных с 9:00 до 21:00</span>
 						</div>
 						<button class="enter-btn is-lg-visible">
@@ -382,10 +383,16 @@
 								</select>
 								<ul class="tabNavigation">
 									<li>
-										<a href="#tab1.tab">Офисы</a>
+										<a href="#tab1.tab">
+											<span class="is-lg-visible">Офисы</span>
+											<span class="is-lg-hidden">В офисе</span>
+										</a>
 									</li>
 									<li>
-										<a href="#tab2.tab">Онлайн-заявка</a>
+										<a href="#tab2.tab">
+											<span class="is-lg-visible">Онлайн-заявка</span>
+											<span class="is-lg-hidden">Онлайн</span>
+										</a>
 									</li>
 									<li>
 										<a href="#tab3.tab">Заказать выезд</a>
@@ -413,8 +420,11 @@
 											<span class="metro">м. Бабушкинская</span>							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
 										</div>
 									</div>
-									<div class="is-lg-hidden map-section">
+									<div class="is-lg-hidden map-section map-section--item">
 										<img src="img/map.jpg" alt="">
+									</div>
+									<div class="is-lg-hidden map-link-route">
+										<a class="link-route" href="#">Проложить маршрут</a>
 									</div>
 									<div class="contacts">
 										<div class="links">
@@ -538,7 +548,7 @@
 								<br>					ОГРН: 1137746165281
 							</p>
 						</div>
-						<div class="item col-lg-4">
+						<div class="item item--docs col-lg-4">
 							<h3>Документы</h3>
 							<a href="#">Правила предоставления займов</a>
 							<br>

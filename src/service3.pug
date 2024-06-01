@@ -25,6 +25,7 @@ html
 											i В реестре ЦБ РФ
 									img.image(src='img/index-first-block8.png').is-lg-visible
 									img.image(src='img/index-first-block8_mob.png').is-lg-hidden
+									img(src="img/img-buildings3.png", alt="").is-lg-hidden.img-bg-buildings
 									.pre-form.is-lg-visible
 										span Введите свой номер и получите до 5 млн ₽ за 30 минут
 									.pre-form.is-lg-hidden
@@ -45,16 +46,16 @@ html
 								input#amount(type='text' readonly='')
 							#slider-range-max
 							.values.flex
-								div 50 000 P
-								div 10 000 000 P
+								div 50 000 ₽
+								div 10 000 000 ₽
 							.br
 							.field
 								p на личные нужды
 								input#amount3(type='text' readonly='')
 							#slider-range-max3
 							.values.flex
-								div 50 000 P
-								div 10 000 000 P
+								div 50 000 ₽
+								div 10 000 000 ₽
 						.item.col-lg-4
 							.field
 								p срок займа
@@ -70,14 +71,14 @@ html
 										| от 
 										span 27 000
 										|  ₽
-									| 							Ежемесячный платеж
+									div.sub-label 							Ежемесячный платеж
 								.line
 								.top-item
 									p
 											| от 
 											span 2
 											span.percent  %
-									| 							Ставка в месяц
+									div.sub-label 							Ставка в месяц
 							.agree
 								.is-lg-visible
 									input#agree.checkbox(type='checkbox')
@@ -213,7 +214,8 @@ html
 									.item
 										.step
 											| 1 шаг
-											span 2 минуты
+											.step-time
+												.step-time__inner 2 минуты
 										h3 Оставьте заявку
 										p можно на сайте, по телефону или через мессенджер
 										.social
@@ -258,15 +260,15 @@ html
 							.data
 								.item
 									span
-										i Наше предложение
+										i Старый платёж
 									.price
-										| 850 000 ₽
+										| 41 000 ₽
 									| 						под 4,5% в месяц
 								.item
 									span.other
-										i Другие
+										i Новый платёж
 									.price
-										| 700 000 ₽
+										| 25 000 ₽
 									| 						под 6% в месяц
 						.col-lg-6
 							.photos
@@ -320,7 +322,7 @@ html
 							p
 								span На протяжении 10 лет
 								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
-						.top-counts.flex.col-lg-6.offset-lg-1
+						.top-counts.col-lg-6.offset-lg-1
 							.item
 								span 10 лет
 								| 						на рынке
@@ -519,9 +521,13 @@ html
 									option Санкт-Петербург 3
 								ul.tabNavigation
 									li
-										a(href='#tab1.tab') Офисы
+										a(href='#tab1.tab')
+											span.is-lg-visible Офисы
+											span.is-lg-hidden В офисе
 									li
-										a(href='#tab2.tab') Онлайн-заявка
+										a(href='#tab2.tab')
+											span.is-lg-visible Онлайн-заявка
+											span.is-lg-hidden Онлайн
 									li
 										a(href='#tab3.tab') Заказать выезд
 								#tab1.tab
@@ -642,7 +648,7 @@ html
 							p 					ООО  "Ломбард АвтокапиталЪ" 
 								br
 								| 					ОГРН: 1137746165281
-						.item.col-lg-4
+						.item.item--docs.col-lg-4
 							h3 Документы
 							a(href='#') Правила предоставления займов
 							br

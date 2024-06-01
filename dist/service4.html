@@ -212,7 +212,8 @@
 							</a>
 						</div>
 						<div class="phone">
-							<a href="#">+7 495 156-78-98</a>
+							<a class="is-lg-visible" href="#">+7 495 156-78-98</a>
+							<a class="is-lg-hidden" href="#">+7 (495) 156-78-98</a>
 							<span class="is-lg-visible">					Без выходных с 9:00 до 21:00</span>
 						</div>
 						<button class="enter-btn is-lg-visible">
@@ -236,6 +237,7 @@
 										</span>
 									</p>
 									<img class="image" src="img/index-first-block10.png">
+									<img class="is-lg-hidden img-bg-buildings" src="img/img-buildings3.png" alt="">
 									<div class="pre-form is-lg-visible">
 										<span>Введите свой номер и получите до 5 млн ₽ за 30 минут</span>
 									</div>
@@ -266,8 +268,8 @@
 							</div>
 							<div id="slider-range-max"></div>
 							<div class="values flex">
-								<div>50 000 P</div>
-								<div>10 000 000 P</div>
+								<div>50 000 ₽</div>
+								<div>10 000 000 ₽</div>
 							</div>
 						</div>
 						<div class="item col-lg-4">
@@ -286,14 +288,16 @@
 								<div class="top-item">
 									<p>от 
 										<span>27 000</span> ₽
-									</p>							Ежемесячный платеж
+									</p>
+									<div class="sub-label">							Ежемесячный платеж</div>
 								</div>
 								<div class="line"></div>
 								<div class="top-item">
 									<p>от 
 										<span>2</span>
 										<span class="percent"> %</span>
-									</p>							Ставка в месяц
+									</p>
+									<div class="sub-label">							Ставка в месяц</div>
 								</div>
 							</div>
 							<div class="agree">
@@ -329,7 +333,9 @@
 									<img src="img/target14.svg">
 								</div>
 								<div>
-									<span>Низкая ставка</span>							Минимальная ставка в Москве
+									<span>Низкая ставка</span>
+									<div class="is-lg-visible">							Минимальная ставка в Москве</div>
+									<div class="is-lg-hidden">Предоставляем минимальную ставку, если авто остаётся на стоянке</div>
 								</div>
 							</div>
 							<div class="item col-lg-4">
@@ -432,7 +438,9 @@
 								<div class="list">
 									<div class="item">
 										<div class="step">1 шаг
-											<span>2 минуты</span>
+											<div class="step-time">
+												<div class="step-time__inner">2 минуты</div>
+											</div>
 										</div>
 										<h3>Оставьте заявку</h3>
 										<p>можно на сайте, по телефону или через мессенджер</p>
@@ -593,6 +601,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="wrap is-lg-hidden order-mob-8">
+				<div class="hr-line"></div>
 			</div>
 			<div class="conditions-block order-mob-9">
 				<div class="wrap">
@@ -801,7 +812,7 @@
 								<span>На протяжении 10 лет</span> мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
 							</p>
 						</div>
-						<div class="top-counts flex col-lg-6 offset-lg-1">
+						<div class="top-counts col-lg-6 offset-lg-1">
 							<div class="item">
 								<span>10 лет</span>						на рынке
 							</div>
@@ -1068,10 +1079,16 @@
 								</select>
 								<ul class="tabNavigation">
 									<li>
-										<a href="#tab1.tab">Офисы</a>
+										<a href="#tab1.tab">
+											<span class="is-lg-visible">Офисы</span>
+											<span class="is-lg-hidden">В офисе</span>
+										</a>
 									</li>
 									<li>
-										<a href="#tab2.tab">Онлайн-заявка</a>
+										<a href="#tab2.tab">
+											<span class="is-lg-visible">Онлайн-заявка</span>
+											<span class="is-lg-hidden">Онлайн</span>
+										</a>
 									</li>
 									<li>
 										<a href="#tab3.tab">Заказать выезд</a>
@@ -1224,7 +1241,7 @@
 								<br>					ОГРН: 1137746165281
 							</p>
 						</div>
-						<div class="item col-lg-4">
+						<div class="item item--docs col-lg-4">
 							<h3>Документы</h3>
 							<a href="#">Правила предоставления займов</a>
 							<br>

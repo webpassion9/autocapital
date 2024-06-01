@@ -21,7 +21,7 @@ html
 								| Финансовая группа Автокапиталъ входит в число ведущих компаний на рынке микрофинансирования в России
 							p На протяжении 10 лет
 								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
-						.top-counts.flex.col-lg-6.offset-lg-1
+						.top-counts.col-lg-6.offset-lg-1
 							.item
 								span 10 лет
 								| 						на рынке
@@ -192,9 +192,13 @@ html
 									option Санкт-Петербург 3
 								ul.tabNavigation
 									li
-										a(href='#tab1.tab') Офисы
+										a(href='#tab1.tab')
+											span.is-lg-visible Офисы
+											span.is-lg-hidden В офисе
 									li
-										a(href='#tab2.tab') Онлайн-заявка
+										a(href='#tab2.tab')
+											span.is-lg-visible Онлайн-заявка
+											span.is-lg-hidden Онлайн
 									li
 										a(href='#tab3.tab') Заказать выезд
 								#tab1.tab
@@ -306,7 +310,7 @@ html
 							p 					ООО  "Ломбард АвтокапиталЪ" 
 								br
 								| 					ОГРН: 1137746165281
-						.item.col-lg-4
+						.item.item--docs.col-lg-4
 							h3 Документы
 							a(href='#') Правила предоставления займов
 							br

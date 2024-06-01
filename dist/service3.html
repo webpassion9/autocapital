@@ -212,7 +212,8 @@
 							</a>
 						</div>
 						<div class="phone">
-							<a href="#">+7 495 156-78-98</a>
+							<a class="is-lg-visible" href="#">+7 495 156-78-98</a>
+							<a class="is-lg-hidden" href="#">+7 (495) 156-78-98</a>
 							<span class="is-lg-visible">					Без выходных с 9:00 до 21:00</span>
 						</div>
 						<button class="enter-btn is-lg-visible">
@@ -236,6 +237,7 @@
 									</p>
 									<img class="image is-lg-visible" src="img/index-first-block8.png">
 									<img class="image is-lg-hidden" src="img/index-first-block8_mob.png">
+									<img class="is-lg-hidden img-bg-buildings" src="img/img-buildings3.png" alt="">
 									<div class="pre-form is-lg-visible">
 										<span>Введите свой номер и получите до 5 млн ₽ за 30 минут</span>
 									</div>
@@ -266,8 +268,8 @@
 							</div>
 							<div id="slider-range-max"></div>
 							<div class="values flex">
-								<div>50 000 P</div>
-								<div>10 000 000 P</div>
+								<div>50 000 ₽</div>
+								<div>10 000 000 ₽</div>
 							</div>
 							<div class="br"></div>
 							<div class="field">
@@ -276,8 +278,8 @@
 							</div>
 							<div id="slider-range-max3"></div>
 							<div class="values flex">
-								<div>50 000 P</div>
-								<div>10 000 000 P</div>
+								<div>50 000 ₽</div>
+								<div>10 000 000 ₽</div>
 							</div>
 						</div>
 						<div class="item col-lg-4">
@@ -296,14 +298,16 @@
 								<div class="top-item">
 									<p>от 
 										<span>27 000</span> ₽
-									</p>							Ежемесячный платеж
+									</p>
+									<div class="sub-label">							Ежемесячный платеж</div>
 								</div>
 								<div class="line"></div>
 								<div class="top-item">
 									<p>от 
 										<span>2</span>
 										<span class="percent"> %</span>
-									</p>							Ставка в месяц
+									</p>
+									<div class="sub-label">							Ставка в месяц</div>
 								</div>
 							</div>
 							<div class="agree">
@@ -494,7 +498,9 @@
 								<div class="list">
 									<div class="item">
 										<div class="step">1 шаг
-											<span>2 минуты</span>
+											<div class="step-time">
+												<div class="step-time__inner">2 минуты</div>
+											</div>
 										</div>
 										<h3>Оставьте заявку</h3>
 										<p>можно на сайте, по телефону или через мессенджер</p>
@@ -560,15 +566,15 @@
 							<div class="data">
 								<div class="item">
 									<span>
-										<i>Наше предложение</i>
+										<i>Старый платёж</i>
 									</span>
-									<div class="price">850 000 ₽</div>						под 4,5% в месяц
+									<div class="price">41 000 ₽</div>						под 4,5% в месяц
 								</div>
 								<div class="item">
 									<span class="other">
-										<i>Другие</i>
+										<i>Новый платёж</i>
 									</span>
-									<div class="price">700 000 ₽</div>						под 6% в месяц
+									<div class="price">25 000 ₽</div>						под 6% в месяц
 								</div>
 							</div>
 						</div>
@@ -640,7 +646,7 @@
 								<span>На протяжении 10 лет</span> мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
 							</p>
 						</div>
-						<div class="top-counts flex col-lg-6 offset-lg-1">
+						<div class="top-counts col-lg-6 offset-lg-1">
 							<div class="item">
 								<span>10 лет</span>						на рынке
 							</div>
@@ -907,10 +913,16 @@
 								</select>
 								<ul class="tabNavigation">
 									<li>
-										<a href="#tab1.tab">Офисы</a>
+										<a href="#tab1.tab">
+											<span class="is-lg-visible">Офисы</span>
+											<span class="is-lg-hidden">В офисе</span>
+										</a>
 									</li>
 									<li>
-										<a href="#tab2.tab">Онлайн-заявка</a>
+										<a href="#tab2.tab">
+											<span class="is-lg-visible">Онлайн-заявка</span>
+											<span class="is-lg-hidden">Онлайн</span>
+										</a>
 									</li>
 									<li>
 										<a href="#tab3.tab">Заказать выезд</a>
@@ -1074,7 +1086,7 @@
 								<br>					ОГРН: 1137746165281
 							</p>
 						</div>
-						<div class="item col-lg-4">
+						<div class="item item--docs col-lg-4">
 							<h3>Документы</h3>
 							<a href="#">Правила предоставления займов</a>
 							<br>

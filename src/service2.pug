@@ -47,8 +47,8 @@ html
 								input#amount(type='text' readonly='')
 							#slider-range-max
 							.values.flex
-								div 50 000 P
-								div 10 000 000 P
+								div 50 000 ₽
+								div 10 000 000 ₽
 						.item.col-lg-4
 							.field
 								p срок займа
@@ -64,19 +64,19 @@ html
 										| от 
 										span 27 000
 										|  ₽
-									| 							Ежемесячный платеж
+									div.sub-label 							Ежемесячный платеж
 								.line
 								.top-item
 									p
 											| от 
 											span 2
 											span.percent  %
-									| 							Ставка в месяц
+									div.sub-label 							Ставка в месяц
 							.agree
 								input#agree.checkbox(type='checkbox')
 								label(for='agree')
 									span Минимальный платёж
-									| 							Первые 3 месяца оплачивайте только проценты
+									.agree-text Первые 3 месяца оплачивайте только проценты
 								.link.is-lg-visible
 									a(href='#') График платежей
 					.bottom-button
@@ -158,7 +158,8 @@ html
 									.item
 										.step
 											| 1 шаг
-											span 2 минуты
+											.step-time
+												.step-time__inner 2 минуты
 										h3 Оставьте заявку
 										p можно на сайте, по телефону или через мессенджер
 										.social
@@ -529,7 +530,7 @@ html
 							p
 								span На протяжении 10 лет
 								|  мы активно предоставляем займы физическим лицам и представителям малого бизнеса под залог транспортных средств.
-						.top-counts.flex.col-lg-6.offset-lg-1
+						.top-counts.col-lg-6.offset-lg-1
 							.item
 								span 10 лет
 								| 						на рынке
@@ -650,9 +651,13 @@ html
 									option Санкт-Петербург 3
 								ul.tabNavigation
 									li
-										a(href='#tab1.tab') Офисы
+										a(href='#tab1.tab')
+											span.is-lg-visible Офисы
+											span.is-lg-hidden В офисе
 									li
-										a(href='#tab2.tab') Онлайн-заявка
+										a(href='#tab2.tab')
+											span.is-lg-visible Онлайн-заявка
+											span.is-lg-hidden Онлайн
 									li
 										a(href='#tab3.tab') Заказать выезд
 								#tab1.tab.tab
@@ -764,7 +769,7 @@ html
 							p 					ООО  "Ломбард АвтокапиталЪ" 
 								br
 								| 					ОГРН: 1137746165281
-						.item.col-lg-4
+						.item.item--docs.col-lg-4
 							h3 Документы
 							a(href='#') Правила предоставления займов
 							br

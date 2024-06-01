@@ -130,9 +130,13 @@ html
 									option Санкт-Петербург 3
 								ul.tabNavigation
 									li
-										a(href='#tab1.tab') Офисы
+										a(href='#tab1.tab')
+											span.is-lg-visible Офисы
+											span.is-lg-hidden В офисе
 									li
-										a(href='#tab2.tab') Онлайн-заявка
+										a(href='#tab2.tab')
+											span.is-lg-visible Онлайн-заявка
+											span.is-lg-hidden Онлайн
 									li
 										a(href='#tab3.tab') Заказать выезд
 								#tab1.tab
@@ -156,8 +160,10 @@ html
 										.item
 											span.metro м. Бабушкинская
 											| 							г. Москва, ул. Лётчика Бабушкина, д.32, корп.3
-									.is-lg-hidden.map-section
+									.is-lg-hidden.map-section.map-section--item
 										img(src="img/map.jpg", alt="")
+									.is-lg-hidden.map-link-route
+										a(href="#").link-route Проложить маршрут
 									.contacts
 										.links
 											div
@@ -244,7 +250,7 @@ html
 							p 					ООО  "Ломбард АвтокапиталЪ" 
 								br
 								| 					ОГРН: 1137746165281
-						.item.col-lg-4
+						.item.item--docs.col-lg-4
 							h3 Документы
 							a(href='#') Правила предоставления займов
 							br
