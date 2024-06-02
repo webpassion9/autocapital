@@ -730,7 +730,6 @@ p {
   height: 32px;
   border-radius: 3px;
   background: #003964;
-  font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   @media (min-width: $lg) {
@@ -4128,9 +4127,18 @@ p {
     margin-bottom: 30px;
   }
 }
+.partners-block .list {
+  align-items: center;
+  row-gap: 30px;
+  padding-top: 15px;
+  @media (min-width: $lg) {
+    padding-top: 30px;
+  }
+}
 .partners-block .list .item {
+  @media (min-width: $lg) {
+  }
   @media (max-width: $lg - 1px) {
-    text-align: center;
   }
 }
 .docs-page {
@@ -5608,6 +5616,32 @@ letter-spacing: -0.01em;
     margin-bottom: 40px;
   }
 }
+.article-page article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  @media (min-width: $lg) {
+    font-size: 18px;
+    line-height: 140%;
+  }
+  &>li {
+    &:before {
+      content: "";
+      display: inline-flex;
+      flex-shrink: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background: #003964;
+      margin-right: 10px;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
 .article-page article .table {
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -5771,9 +5805,24 @@ letter-spacing: -0.01em;
 .article-page article .rating .rate-area > label:active {
   position: relative;
 }
+.share-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .article-page article .share a {
-  display: inline-block;
-  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $lg) {
+    background: #003964;
+  }
+  @media (max-width: $lg - 1px) {
+    background: linear-gradient(0deg, #004981, #004981), #3B5998;
+  }
 }
 .popup {
   padding: 0!important;
@@ -7980,4 +8029,8 @@ a {
   padding-right: 15px;
   font-size: 18px;
   margin-bottom: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff url(../img/select.svg) no-repeat right 20px top 50%;
 }
