@@ -4819,11 +4819,20 @@ letter-spacing: -0.01em;
 }
 .catalog-page .heading-catalog {
   margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  @media (max-width: $lg - 1px) {
+    padding-right: 60px;
+    max-width: 240px;
+  }
   @media (min-width: $lg) {
     margin-bottom: 40px;
   }
 }
 .catalog-page .heading-catalog sup {
+  flex-shrink: 0;
   color: #fff;
   display: inline-block;
   background: #df2222;
@@ -4833,10 +4842,7 @@ letter-spacing: -0.01em;
   font-weight: 500;
   line-height: 15px;
   transform: skew(-8deg);
-  @media (max-width: $lg - 1px) {
-    position: relative;
-    bottom: -4px;
-  }
+  bottom: -4px;
 }
 .catalog-page .heading-catalog sup span {
   font-style: normal;
@@ -5616,7 +5622,7 @@ letter-spacing: -0.01em;
     margin-bottom: 40px;
   }
 }
-.article-page article ul {
+.article-page article ul:not(.article-page article nav ul) {
   list-style: none;
   margin: 0;
   padding: 0;
