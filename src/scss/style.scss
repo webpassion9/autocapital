@@ -433,7 +433,6 @@ p {
   padding: 0;
   @media (max-width: $lg - 1px) {
     background: rgba(#CBD8E0,.8);
-    box-shadow: 0 -1px 0px 0 rgba(#CBD8E0,.3);
     margin: 6px 0 3px;
   }
   @media (min-width: $lg) {
