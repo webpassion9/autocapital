@@ -628,6 +628,10 @@ p {
 .header .logo {
   margin-top: 3px;
   margin-right: 30px;
+  a {
+    line-height: 0;
+    display: block;
+  }
 }
 .header-inner {
   display: flex;
